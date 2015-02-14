@@ -1,0 +1,185 @@
+/**
+ * CONTENTS
+ *
+ * IMPORTS
+ * Custom files...........Owned style files.
+ * Dependencies...........Third-party files.
+ *
+ * SETTINGS
+ * Colors.................Globally-available colors.
+ *
+ * TOOLS
+ * Macros.................Useful macros.
+ *
+ * GENERIC
+ * Box-sizing............Better default `box-sizing`.
+ * List..................Elimination of 'list-style'
+ * Others................Other useful styles. 
+ *
+ * OBJECTS
+ * Wrappers.............Wrapping elements.
+ *
+ * COMPONENTS
+ * Header............The main page header.
+ * Footer............The main page footer.
+ *
+ * TRUMPS
+ * Text.................Text helpers.
+ */
+
+
+/**************************************
+ *               IMPORTS              *
+ **************************************
+ */
+ 
+/* Dependencies
+ */
+// Normalize v3.0.3
+@import "normalize" 
+// nib v1.1.0
+@import "nib"
+
+
+/* Custom files 
+ */
+// Custom Icons
+@import "icons"
+
+
+/**************************************
+ *              SETTINGS              *
+ **************************************
+ */
+
+/* Colors 
+ */
+$primary_color 	  = #3498db
+$secondary_color  = #808080
+$background_color = #ecf0f1
+$light_text_color = #8a8787
+$dark_text_color  = #000000
+
+
+/**************************************
+ *               TOOLS                *
+ **************************************
+ */
+ 
+/* Macros
+ */
+// SOON TM
+
+
+
+/**************************************
+ *             GENERIC                *
+ **************************************
+ */
+ 
+/* Box-sizing
+ */
+*
+	box-sizing border-size
+	margin 0
+	padding 0
+	
+/* List
+ */
+li
+	list-style none
+
+/* Others
+ */
+body
+	background $background_color
+a
+	text-decoration none
+h1
+	margin 0
+	
+
+
+/**************************************
+ *             OBJECTS                *
+ **************************************
+ */
+ 
+/* Wrappers
+ */
+// SOON TM
+
+
+
+/**************************************
+ *            COMPONENTS              *
+ **************************************
+ */
+ 
+/* Header
+ */
+.Header
+	background $primary_color
+	display flex
+	height 2em
+	justify-content center
+	padding .5em 0 
+	width 100%
+.Header__button
+    &.Active
+    	#span1
+    		top 1.4em
+    		transform rotate(45deg)
+    	#span2
+    		background transparent 
+    	#span3
+    		top 1.4em
+    		transform rotate(-45deg) 
+.Header__button__line
+    background white
+    border-radius 1px
+    cursor pointer
+    height 5px
+    position absolute
+    right .5em
+    transition all 300ms ease-in-out
+    width 35px
+    &#span1
+    	top .75em
+    &#span2
+    	top 1.4em
+    &#span3
+    	top 2.05em
+.Header__page-title
+	color white
+	font-size 1.8em
+.Header__site-title
+	display none
+	color $secondary_color
+.Header__site-title--mod
+	color $primary_color
+.Header__user
+	display none
+
+/* Nav menu
+ */	
+.Menu
+	display none
+	background $primary_color
+	width 100%
+	&.Active
+		display block
+.Menu__item
+	border-top 1px solid white
+	padding-top 1em
+	height 2em
+	text-align center
+.Menu__link
+	color white
+	&:hover, &:focus
+		color $dark_text_color
+
+/* Footer
+ */
+.Footer
+	display none

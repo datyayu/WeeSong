@@ -5,28 +5,60 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>WeeSong | New song</title>
-<!-- Styleshet =================================-->
+<!-- Styleshets =================================-->
+	<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700">
 	<link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 <!-- Header ====================================-->
 	<header class="Header">
 	<!-- Logo / Title ==========================-->
-		<span class="Header__title">
-			Wee<span class="Header__title--mod">Song</span>
-		</span>
+		<h1 class="Header__site-title">
+			Wee<span class="Header__site-title--mod">song</span>
+		</h1>
 	<!-- User info =============================-->
-		<div class="User">
+		<div class="Header__user">
 			<!-- Username ======================-->
-			<span class="User__username">
+			<span class="Header__user__username">
 				SampleUser
 			</span>
 			<!-- User avatar ===================-->
-			<figure class="User__image-container">
-				<img src="assets/img/avatar.png" class="user__image">
+			<figure class="Header__user__image-container">
+				<img src="assets/img/user.jpg" class="Header__user__image">
 			</figure>
 		</div> <!-- /.User -->
+	<!-- Page title on mobile ==================-->
+		<span class="Header__page-title">Now Playing</span>
+	<!-- Menu mobile button ====================-->
+		<div class="Header__button"> 
+			<span class="Header__button__line" id="span1"></span>
+			<span class="Header__button__line" id="span2"></span>
+			<span class="Header__button__line" id="span3"></span>
+		</div>
 	</header>
+
+<!-- Nav menu ==================================-->
+	<nav class="Menu">
+		<li class="Menu__list">
+			<li class="Menu__item">
+				<a class="Menu__link Active" href="#">
+					Now Playing
+				</a>
+			</li><li class="Menu__item">
+				<a class="Menu__link"href="#">
+					Top Hits
+				</a>
+			</li><li class="Menu__item">
+				<a class="Menu__link"href="#">
+					Artists
+				</a>
+			</li><li class="Menu__item">
+				<a class="Menu__link"href="#">
+					Playlists
+				</a>
+			</li>
+		</li>
+	</nav>
 
 
 <!-- Scripts ===================================-->

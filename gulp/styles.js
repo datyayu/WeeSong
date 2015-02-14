@@ -18,17 +18,15 @@ gulp.task('css', function () {
 
 // Reload on html changes.
 gulp.task('html', function () {
-	gulp.src([
-		'./app/*.html',
-		'./app/layouts/**/*.html'
-	]).pipe(connect.reload())
+	gulp.src(['./app/*.html', './app/layouts/**/*.html'])
+		.pipe(connect.reload())
 })
 
 
 // Watch for changes.
 gulp.task('[dev]::watch', ['css'], function () {
 	/* Stylus changes */
-	gulp.watch('./app/stylus/styles.styl', ['css'])
+	gulp.watch('./app/stylus/*.styl', ['css'])
 
 	/* Html changes */
 	gulp.watch([
