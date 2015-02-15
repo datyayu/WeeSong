@@ -54,8 +54,9 @@
 
 /* Colors 
  */
-$primary_color 	  = #3498db
-$secondary_color  = #808080
+$primary_color    = #3498db
+$secondary_color  = #09588c
+$tertiary_color   = #808080
 $background_color = #ecf0f1
 $light_text_color = #8a8787
 $dark_text_color  = #000000
@@ -68,7 +69,8 @@ $dark_text_color  = #000000
  
 /* Macros
  */
-// SOON TM
+smooth_transition(time) 
+  transition all time ease-in-out
 
 
 
@@ -80,24 +82,26 @@ $dark_text_color  = #000000
 /* Box-sizing
  */
 *
-	box-sizing border-size
-	margin 0
-	padding 0
-	
+  box-sizing border-box
+  margin 0
+  padding 0
+
 /* List
  */
 li
-	list-style none
+  list-style none
 
 /* Others
  */
 body
-	background $background_color
+  background $background_color
+  overflow hidden
+
 a
-	text-decoration none
+  text-decoration none
 h1
-	margin 0
-	
+  margin 0
+
 
 
 /**************************************
@@ -119,67 +123,101 @@ h1
 /* Header
  */
 .Header
-	background $primary_color
-	display flex
-	height 2em
-	justify-content center
-	padding .5em 0 
-	width 100%
+  background $primary_color
+  display flex
+  height 3em
+  justify-content space-between
+  flex-direction: row-reverse
+  padding .5em 0em 
+  position absolute
+  left 0
+  top 0
+  smooth_transition(300ms)
+  width 100%
+  &.Move
+    left 50%
+    .Header__page-title
+      padding-left 10%
 .Header__button
-    &.Active
-    	#span1
-    		top 1.4em
-    		transform rotate(45deg)
-    	#span2
-    		background transparent 
-    	#span3
-    		top 1.4em
-    		transform rotate(-45deg) 
+  display flex
+  height 2em
+  margin-left 1em
+  position relative
+  smooth_transition(300ms)
+  width 2.2em
+  &.Active
+    margin-left 35%
+    #span1
+      top .55em
+      transform rotate(-45deg)
+      width 1em
+    #span2
+      left .4em
+    #span3
+      top 1.1em
+      transform rotate(45deg) 
+      width 1em
 .Header__button__line
-    background white
-    border-radius 1px
-    cursor pointer
-    height 5px
-    position absolute
-    right .5em
-    transition all 300ms ease-in-out
-    width 35px
-    &#span1
-    	top .75em
-    &#span2
-    	top 1.4em
-    &#span3
-    	top 2.05em
+  background white
+  border-radius 1px
+  cursor pointer
+  height 4px
+  left 0.1em
+  position absolute
+  smooth_transition(300ms)
+  width 30px
+  &#span1
+    top .1em
+  &#span2
+    top .83em
+  &#span3
+    top 1.5em
 .Header__page-title
-	color white
-	font-size 1.8em
+  color white
+  font-size 1.8em
+  margin-right 1em
+  padding-left 0em
+  smooth_transition(300ms)
 .Header__site-title
-	display none
-	color $secondary_color
-.Header__site-title--mod
-	color $primary_color
+  display none
 .Header__user
-	display none
+  display none
 
 /* Nav menu
- */	
+ */
 .Menu
-	display none
-	background $primary_color
-	width 100%
-	&.Active
-		display block
+  background $secondary_color
+  border-right 3px solid $secondary_color
+  height 100%
+  left -50%
+  position absolute
+  smooth_transition(300ms)
+  width 50%
+  &.Active
+    left  0%
+.Menu__title
+  height 3em
+  padding .5em
+  text-align center
+.Menu__title__text
+  color white
+  cursor pointer
+  font-size 1.8em
+  user-select none
+.Menu__title__text--mod
+  color $primary_color
 .Menu__item
-	border-top 1px solid white
-	padding-top 1em
-	height 2em
-	text-align center
+  border-top 1px solid white
+  height 3em
+  padding-top 1em
+  text-align center
+  &:hover
+    background $primary_color
 .Menu__link
-	color white
-	&:hover, &:focus
-		color $dark_text_color
+  color white
+  user-select none
 
 /* Footer
  */
 .Footer
-	display none
+  display none
