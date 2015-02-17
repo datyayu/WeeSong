@@ -95,7 +95,7 @@ li
  */
 body
   background $background_color
-  overflow hidden
+  overflow-x hidden
 
 a
   text-decoration none
@@ -111,7 +111,9 @@ h1
  
 /* Wrappers
  */
-// SOON TM
+.Wrapper
+  width 100%
+  height 100%
 
 
 
@@ -129,15 +131,8 @@ h1
   justify-content space-between
   flex-direction: row-reverse
   padding .5em 0em 
-  position absolute
-  left 0
-  top 0
   smooth_transition(300ms)
   width 100%
-  &.Move
-    left 50%
-    .Header__page-title
-      padding-left 10%
 .Header__button
   display flex
   height 2em
@@ -145,18 +140,6 @@ h1
   position relative
   smooth_transition(300ms)
   width 2.2em
-  &.Active
-    margin-left 35%
-    #span1
-      top .55em
-      transform rotate(-45deg)
-      width 1em
-    #span2
-      left .4em
-    #span3
-      top 1.1em
-      transform rotate(45deg) 
-      width 1em
 .Header__button__line
   background white
   border-radius 1px
@@ -190,11 +173,10 @@ h1
   border-right 3px solid $secondary_color
   height 100%
   left -50%
-  position absolute
+  top 0
+  position fixed
   smooth_transition(300ms)
   width 50%
-  &.Active
-    left  0%
 .Menu__title
   height 3em
   padding .5em
@@ -217,7 +199,53 @@ h1
   color white
   user-select none
 
+/* Content
+ */
+.Wrapper
+  position absolute
+  right 0
+  smooth_transition(300ms)
+  top 0
+  &.Move // Show Menu
+    right -50%
+    .Header__button
+      margin 0 35%
+    #span1
+      top .55em
+      transform rotate(-45deg)
+      width 1em
+    #span2
+      left .4em
+    #span3
+      top 1.1em
+      transform rotate(45deg) 
+      width 1em
+    .Menu
+      left 0
+  
+    
+
 /* Footer
  */
 .Footer
   display none
+  
+
+
+/**************************************
+ *               PAGES                *
+ **************************************
+ */
+.Content
+  display flex
+  flex-direction column
+.Player__cover__image
+  width 100%
+.Player__info
+  text-align center
+.Player__text
+  color $light_text_color
+  font-size 1.5em
+  padding .2em 0
+  &--track
+    color $dark_text_color

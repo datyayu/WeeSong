@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
+<div class="Wrapper">
 <!-- Header ====================================-->
 	<header class="Header">
 	<!-- Logo / Title ==========================-->
@@ -37,41 +38,61 @@
 		</div>
 	</header>
 
+
 <!-- Nav menu ==================================-->
 	<nav class="Menu">
 		<div class="Menu__title">
-			<span class="Menu__title__text">Wee<span class="Menu__title__text--mod">song</span></span>
+			<a class="Menu__title__text" href="#">Wee<span class="Menu__title__text--mod">song</span></a>
 		</div>
 		<li class="Menu__list">
 			<li class="Menu__item">
-				<a class="Menu__link Active" href="#">
+				<a class="Menu__link Active" href="#/player/">
 					Now Playing
 				</a>
 			</li><li class="Menu__item">
-				<a class="Menu__link"href="#">
+				<a class="Menu__link"href="#/top/">
 					Top Hits
 				</a>
 			</li><li class="Menu__item">
-				<a class="Menu__link"href="#">
+				<a class="Menu__link"href="#/artists/">
 					Artists
 				</a>
 			</li><li class="Menu__item">
-				<a class="Menu__link"href="#">
+				<a class="Menu__link"href="#/playlists/">
 					Playlists
 				</a>
 			</li>
 		</li>
 	</nav>
 
-<!-- Nav menu ==================================-->
+
+<!-- Content ==================================-->
 	<div class="Content">
-		<!-- // TODO: all -->
+		<div class="Page Player">
+		<!-- Cover -->
+			<figure class="Player__cover">
+					<img class="Player__cover__image" src="assets/img/cover.jpg">
+			</figure>
+
+		<!-- Cover -->
+			<div class="Player__info">
+				<p class="Player__text Player__text--track">
+					Daydream Cafe
+				</p>
+				<p class="Player__text Player__text--artist">
+					Petit Rabbit's
+				</p>
+				<p class="Player__text Player__text--album">
+					Daydream Cafe
+				</p>
+			</div>
+		</div>
 	</div>
+</div>
 
 
 <!-- Scripts ===================================-->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="assets/scripts/main.js"></script>
+	<script src="scripts/yayuQuery.js"></script>
 	<script src="scripts/main.js"></script>
 </body>
 </html>
