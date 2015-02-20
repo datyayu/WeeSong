@@ -1,4 +1,8 @@
 /**
+ * Styles.styl --- Weesong main stylesheet
+ * By @datyayu
+ * Last update: 2015.02.20
+ *
  * CONTENTS
  *
  * IMPORTS
@@ -9,22 +13,22 @@
  * Colors.................Globally-available colors.
  *
  * TOOLS
- * Macros.................Useful macros.
+ * Mixins.................Useful macros and functions.
  *
  * GENERIC
- * Box-sizing............Better default `box-sizing`.
- * List..................Elimination of 'list-style'
- * Others................Other useful styles. 
+ * Box-sizing.............Better default 'box-sizing'.
+ * List...................Elimination of 'list-style'
+ * Others.................Other useful styles.
  *
  * OBJECTS
- * Wrappers.............Wrapping elements.
+ * Wrappers...............Wrapping elements.
  *
  * COMPONENTS
- * Header............The main page header.
- * Footer............The main page footer.
+ * Header................The main page header.
+ * Footer................The main page footer.
  *
  * TRUMPS
- * Text.................Text helpers.
+ * Text..................Text helpers.
  */
 
 
@@ -32,19 +36,14 @@
  *               IMPORTS              *
  **************************************
  */
- 
-/* Dependencies
- */
-// Normalize v3.0.3
-@import "normalize" 
-// nib v1.1.0
-@import "nib"
 
+/* Dependencies */
+@import "normalize" // Normalize v3.0.3
+@import "nib"       // nib v1.1.0
 
-/* Custom files 
- */
-// Custom Icons
-@import "icons"
+/* Custom files */
+@import "icons" // Custom Icons
+
 
 
 /**************************************
@@ -52,8 +51,7 @@
  **************************************
  */
 
-/* Colors 
- */
+/* Colors */
 $primary_color    = #3498db
 $secondary_color  = #09588c
 $tertiary_color   = #808080
@@ -66,10 +64,9 @@ $dark_text_color  = #000000
  *               TOOLS                *
  **************************************
  */
- 
-/* Macros
- */
-smooth_transition(time) 
+
+/* Mixins */
+smooth_transition(time)
   transition all time ease-in-out
 
 
@@ -78,27 +75,23 @@ smooth_transition(time)
  *             GENERIC                *
  **************************************
  */
- 
-/* Box-sizing
- */
+
+/* Box-sizing */
 *
   box-sizing border-box
   margin 0
   padding 0
 
-/* List
- */
+/* List */
 li
   list-style none
 
-/* Others
- */
+/* Others */
+a
+  text-decoration none
 body
   background $background_color
   overflow-x hidden
-
-a
-  text-decoration none
 h1
   margin 0
 
@@ -108,7 +101,7 @@ h1
  *             OBJECTS                *
  **************************************
  */
- 
+
 /* Wrappers
  */
 .Wrapper
@@ -121,16 +114,15 @@ h1
  *            COMPONENTS              *
  **************************************
  */
- 
-/* Header
- */
+
+/* Header */
 .Header
   background $primary_color
   display flex
   height 3em
   justify-content space-between
   flex-direction: row-reverse
-  padding .5em 0em 
+  padding .5em 0em
   smooth_transition(300ms)
   width 100%
 .Header__button
@@ -166,8 +158,7 @@ h1
 .Header__user
   display none
 
-/* Nav menu
- */
+/* Nav menu */
 .Menu
   background $secondary_color
   border-right 3px solid $secondary_color
@@ -199,8 +190,7 @@ h1
   color white
   user-select none
 
-/* Content
- */
+/* Content */
 .Wrapper
   position absolute
   right 0
@@ -218,18 +208,17 @@ h1
       left .4em
     #span3
       top 1.1em
-      transform rotate(45deg) 
+      transform rotate(45deg)
       width 1em
     .Menu
       left 0
-  
-    
 
-/* Footer
- */
+
+
+/* Footer */
 .Footer
   display none
-  
+
 
 
 /**************************************
