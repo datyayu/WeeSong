@@ -1,4 +1,4 @@
-/**
+/** INDEX
  * Styles.styl --- Weesong main stylesheet
  * By @datyayu
  * Last update: 2015.02.20
@@ -66,6 +66,10 @@ $dark_text_color  = #000000
  */
 
 /* Mixins */
+animate_element(name, time)
+  animation-name name
+  animation-duration time
+  animation-iteration-count infinite
 smooth_transition(time)
   transition all time ease-in-out
 
@@ -142,11 +146,11 @@ h1
   smooth_transition(300ms)
   width 30px
   &#span1
-    top .1em
+    top .2em
   &#span2
-    top .83em
+    top .8em
   &#span3
-    top 1.5em
+    top 1.4em
 .Header__page-title
   color white
   font-size 1.8em
@@ -177,14 +181,14 @@ h1
   cursor pointer
   font-size 1.8em
   user-select none
-.Menu__title__text--mod
-  color $primary_color
+  &--mod
+    color $primary_color
 .Menu__item
   border-top 1px solid white
   height 3em
   padding-top 1em
   text-align center
-  &:hover
+  &:hover, &.Active
     background $primary_color
 .Menu__link
   color white
@@ -225,16 +229,102 @@ h1
  *               PAGES                *
  **************************************
  */
+/* Page Container */
 .Content
   display flex
   flex-direction column
+
+/* Player page */
+.Player
+  display none
+.Player__controls
+  display flex
+  justify-content space-between
+  margin 0 auto
+  width 80%
+.Player__controls__icon
+  color $tertiary_color
+  font-size 2.5em
+  cursor pointer
+  &.Active
+    color $primary_color
+    cursor pointer
+    font-size 2.5em
+.Player__cover
+  width 100%
+  margin 0
 .Player__cover__image
   width 100%
 .Player__info
+  margin .5em
   text-align center
-.Player__text
-  color $light_text_color
-  font-size 1.5em
-  padding .2em 0
-  &--track
-    color $dark_text_color
+.Player__info__text
+  margin .5em 0
+.Player__progress-bar
+  background $tertiary_color
+  border-radius 5px
+  cursor pointer
+  height .4em
+  margin 1em auto
+  width 90%
+.Player__progress-bar__current-progress
+  animate_element(player_progress, 5s)
+  background $primary_color
+  height 100%
+  position relative
+.Player__progress-bar__dot
+  animate_element(player_pulse, 1s)
+  background $secondary_color
+  border-radius 50%
+  height 1em
+  position absolute
+  right 0
+  top -.25em
+  width 1em
+
+/* Player Animations */
+@keyframes player_progress
+  from
+    width 0%
+  to
+    width 100%
+@keyframes player_pulse
+  from
+    opacity 1
+    height 1em
+    top -0.25em
+    width 1em
+  to
+    height 2em
+    opacity .0
+    top -.75em
+    width 2em
+
+/*Playlist page*/
+.Playlist
+  display block
+.Playlist__item
+  background rgba(black, .7)
+  display flex
+  justify-content stretch
+  height 5em
+  margin 0 .2em
+  overflow hidden
+  text-align center
+  &:nth-child(odd)
+    background rgba(black, .6)
+.Playlist__item__cover
+  margin 0
+  height 100%
+  width auto
+.Playlist__item__image
+  height 100%
+.Playlist__item__info
+  padding-left .3em
+  flex-grow 1
+.Playlist__item__text
+  font-size 1em
+  color rgba(white, .8)
+  &--artist, &--album
+    color rgba(white, .5)
+    font-size .8em
