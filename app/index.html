@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="weesong">
 <head>
 <!-- Meta-stuff ================================-->
 	<meta charset="UTF-8">
@@ -9,8 +9,8 @@
 	<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700">
 	<link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
-<div class="Wrapper">
+<body ng-controller="MainCtrl as Main">
+<div class="Wrapper" ng-class="{'Move': menu.state}">
 
 <!-- Header ====================================-->
 	<header class="Header">
@@ -30,9 +30,9 @@
 			</figure>
 		</div> <!-- /.User -->
 	<!-- Page title on mobile ==================-->
-		<span class="Header__page-title">Top Hits</span>
+		<span class="Header__page-title">{{ pageTitle }}</span>
 	<!-- Menu mobile button ====================-->
-		<div class="Header__button">
+		<div class="Header__button" ng-click="menu.state = !menu.state">
 			<span class="Header__button__line" id="span1"></span>
 			<span class="Header__button__line" id="span2"></span>
 			<span class="Header__button__line" id="span3"></span>
@@ -41,158 +41,30 @@
 
 
 <!-- Nav menu ==================================-->
-	<nav class="Menu">
-		<div class="Menu__title">
-			<a class="Menu__title__text" href="#">Wee<span class="Menu__title__text--mod">song</span></a>
-		</div>
-		<li class="Menu__list">
-			<li class="Menu__item">
-				<a class="Menu__link" href="#/player/">
-					Now Playing
-				</a>
-			</li><li class="Menu__item Active">
-				<a class="Menu__link"href="#/top/">
-					Top Hits
-				</a>
-			</li><li class="Menu__item">
-				<a class="Menu__link"href="#/artists/">
-					Artists
-				</a>
-			</li><li class="Menu__item">
-				<a class="Menu__link"href="#/playlists/">
-					Playlists
-				</a>
+	<nav class="Menu Move">
+		<ul class="Menu__list">
+			<li class="Menu__item" ng-repeat="item in menu.items" ng-class="{'Active': item.id == menu.activeItem}" ng-click="selectOption(item)">
+				<span class="Menu__link"">
+					{{ item.text }}
+				</span>
 			</li>
-		</li>
+		</ul>
 	</nav>
 
 
 <!-- Content ==================================-->
-	<div class="Content">
-		<section class="Page Player">
-		<!-- Cover -->
-			<figure class="Player__cover">
-					<img class="Player__cover__image" src="assets/img/cover.jpg">
-			</figure>
-		<!-- Info -->
-			<div class="Player__info">
-				<p class="Player__info__text Player__text--track">
-					Daydream Cafe
-				</p>
-				<p class="Player__info__text Player__text--artist">
-					Petit Rabbit's
-				</p>
-				<p class="Player__info__text Player__text--album">
-					Gochuumon wa Usagi desu ka?
-				</p>
-			</div> <!-- /.Player__info -->
-		<!-- Progress bar -->
-			<div class="Player__progress-bar">
-				<div class="Player__progress-bar__current-progress">
-					<div class="Player__progress-bar__dot"></div>
-				</div>
-			</div>
-		<!-- Controls -->
-			<div class="Player__controls">
-				<span class="Player__controls__icon icon-loop"></span>
-				<span class="Player__controls__icon icon-backward"></span>
-				<span class="Player__controls__icon icon-play"></span>
-				<span class="Player__controls__icon icon-forward"></span>
-				<span class="Player__controls__icon icon-shuffle"></span>
-			</div><!-- /.Player__controls-->
-		</section><!-- /.Page .Player -->
-
-		<section class="Page Playlist">
-			<ul class="Playlist__list">
-				<li class="Playlist__item">
-					<figure class="Playlist__item__cover">
-						<img class="Playlist__item__image" src="assets/img/cover.jpg">
-					</figure>
-					<div class="Playlist__item__info">
-						<p class="Playlist__item__text Playlist__item__text--title">
-							Daydream Cafe (Coca Version)
-						</p>
-						<p class="Playlist__item__text Playlist__item__text--artist">
-							Petit Rabbit's
-						</p>
-						<p class="Playlist__item__text Playlist__item__text--album">
-							Gochuumon wa Usagi Desu ka?
-						</p>
-					</div>
-				</li>
-				<li class="Playlist__item">
-					<figure class="Playlist__item__cover">
-						<img class="Playlist__item__image" src="assets/img/cover.jpg">
-					</figure>
-					<div class="Playlist__item__info">
-						<p class="Playlist__item__text Playlist__item__text--title">
-							Daydream Cafe (Chino Version)
-						</p>
-						<p class="Playlist__item__text Playlist__item__text--artist">
-							Petit Rabbit's
-						</p>
-						<p class="Playlist__item__text Playlist__item__text--album">
-							Gochuumon wa Usagi Desu ka?
-						</p>
-					</div>
-				</li>
-				<li class="Playlist__item">
-					<figure class="Playlist__item__cover">
-						<img class="Playlist__item__image" src="assets/img/cover.jpg">
-					</figure>
-					<div class="Playlist__item__info">
-						<p class="Playlist__item__text Playlist__item__text--title">
-							Daydream Cafe (Rize Version)
-						</p>
-						<p class="Playlist__item__text Playlist__item__text--artist">
-							Petit Rabbit's
-						</p>
-						<p class="Playlist__item__text Playlist__item__text--album">
-							Gochuumon wa Usagi Desu ka?
-						</p>
-					</div>
-				</li>
-				<li class="Playlist__item">
-					<figure class="Playlist__item__cover">
-						<img class="Playlist__item__image" src="assets/img/cover.jpg">
-					</figure>
-					<div class="Playlist__item__info">
-						<p class="Playlist__item__text Playlist__item__text--title">
-							Daydream Cafe (Sharo Version)
-						</p>
-						<p class="Playlist__item__text Playlist__item__text--artist">
-							Petit Rabbit's
-						</p>
-						<p class="Playlist__item__text Playlist__item__text--album">
-							Gochuumon wa Usagi Desu ka?
-						</p>
-					</div>
-				</li>
-				<li class="Playlist__item">
-					<figure class="Playlist__item__cover">
-						<img class="Playlist__item__image" src="assets/img/cover.jpg">
-					</figure>
-					<div class="Playlist__item__info">
-						<p class="Playlist__item__text Playlist__item__text--title">
-							Daydream Cafe (Chiya Version)
-						</p>
-						<p class="Playlist__item__text Playlist__item__text--artist">
-							Petit Rabbit's
-						</p>
-						<p class="Playlist__item__text Playlist__item__text--album">
-							Gochuumon wa Usagi Desu ka?
-						</p>
-					</div>
-				</li>
-			</ul>
-		</section>
+	<div class="Content" ng-view>
 	</div><!-- /.Content -->
 
 </div> <!-- /.Wrapper -->
 
 
 <!-- Scripts ===================================-->
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script type="text/javascript" src="scripts/main.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular-route.min.js"></script>
+	<script type="text/javascript" src="scripts/main.ctrl.js"></script>
+	<script type="text/javascript" src="scripts/routes.js"></script>
+	<script type="text/javascript" src="scripts/player.ctrl.js"></script>
+	<script type="text/javascript" src="scripts/playlist.ctrl.js"></script>
 </body>
 </html>
