@@ -1,0 +1,20 @@
+<section class="Page Playlist">
+  <ul class="Playlist__list">
+    <li class="Playlist__item" ng-repeat="song in playlist" ng-click="play(song)">
+      <figure class="Playlist__item__cover">
+        <img class="Playlist__item__image" ng-src="{{ song.coverImage }}">
+      </figure>
+      <div class="Playlist__item__info">
+        <p class="Playlist__item__text Playlist__item__text--title">
+          {{ song.title }}
+        </p>
+        <p class="Playlist__item__text Playlist__item__text--artist">
+          {{ song.artist }}
+        </p>
+        <p class="Playlist__item__text Playlist__item__text--album">
+          {{ song.album }}
+        </p>
+      </div>
+    </li>
+  </ul>
+</section>

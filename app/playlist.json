@@ -1,0 +1,28 @@
+[
+  {
+    "coverImage": "assets/img/cover.jpg",
+    "title": "Daydream Cafe (Cocoa version)",
+    "artist": "Petit Rabbit's",
+    "album": "Gochuumon wa Usagi Desu ka?"
+  }, {
+    "coverImage": "assets/img/cover.jpg",
+    "title": "Daydream Cafe (Chino version)",
+    "artist": "Petit Rabbit's",
+    "album": "Gochuumon wa Usagi Desu ka?"
+  }, {
+    "coverImage": "assets/img/cover.jpg",
+    "title": "Daydream Cafe (Rize version)",
+    "artist": "Petit Rabbit's",
+    "album": "Gochuumon wa Usagi Desu ka?"
+  }, {
+    "coverImage": "assets/img/cover.jpg",
+    "title": "Daydream Cafe (Sharo version)",
+    "artist": "Petit Rabbit's",
+    "album": "Gochuumon wa Usagi Desu ka?"
+  }, {
+    "coverImage": "assets/img/cover.jpg",
+    "title": "Daydream Cafe (Chiya version)",
+    "artist": "Petit Rabbit's",
+    "album": "Gochuumon wa Usagi Desu ka?"
+  }
+]
