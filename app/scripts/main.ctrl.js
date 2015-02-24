@@ -5,7 +5,11 @@ angular.module('weesong', [
 
 /* Main Ctrl */
 angular.module('weesong')
-.controller('MainCtrl', function ($scope, $location) {
+.controller('MainCtrl', function ($scope, $rootScope, $location) {
+/* Global app config */
+  $rootScope.playlist = {};
+
+/* Menu */
   $scope.pageTitle = 'Weesong'; // Inital Page name
 
   /* Menu states */

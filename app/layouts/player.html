@@ -1,7 +1,11 @@
 <section class="Page Player">
+<!-- Audio metadata -->
+  <audio id="player"  preload="auto">
+    <source src="{{ song.url }}"/>
+  </audio>
 <!-- Cover -->
   <figure class="Player__cover">
-      <img class="Player__cover__image" src="{{ song.coverImage }}">
+      <img class="Player__cover__image" ng-src="{{ song.coverImage }}">
   </figure>
 <!-- Info -->
   <div class="Player__info">
@@ -18,21 +22,18 @@
 <!-- Progress bar -->
   <div class="Player__progress-bar" id="timeline" ng-click="changeTrackPos($event)">
     <div class="Player__progress-bar__current-progress" id="currentProgress">
-      <!-- <div class="Player__progress-bar__dot" id="playhead"></div> -->
+      <div class="Player__progress-bar__dot" id="playhead"></div>
     </div>
   </div>
+  <div class="Player__progress-time">
+    {{player.elapsed }} / {{ player.total }}
+  </div>
 <!-- Controls -->
-  <audio id="player"  preload="true">
-    <source src="assets/mp3/daydream_cafe.mp3"/>
-  </audio>
-
-  {{player.currentTime}}
-  {{player.duration}}
   <div class="Player__controls">
-    <span class="Player__controls__icon icon-loop"></span>
-    <span class="Player__controls__icon icon-backward"></span>
+    <span class="Player__controls__icon icon-loop" ng-class="{'Active': player.loop}" ng-click="setLoop()"></span>
+    <span class="Player__controls__icon icon-backward" ng-click="playPrev()"></span>
     <span class="Player__controls__icon" ng-class="player.playing ? 'icon-pause' : 'icon-play'" ng-click="play()"></span>
-    <span class="Player__controls__icon icon-forward"></span>
-    <span class="Player__controls__icon icon-shuffle"></span>
+    <span class="Player__controls__icon icon-forward" ng-click="playNext()"></span>
+    <span class="Player__controls__icon icon-shuffle" ng-class="{'Active': player.shuffle}" ng-click="setShuffle()" ></span>
   </div><!-- /.Player__controls-->
 </section><!-- /.Page .Player -->

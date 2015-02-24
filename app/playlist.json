@@ -3,26 +3,36 @@
     "coverImage": "assets/img/cover.jpg",
     "title": "Daydream Cafe (Cocoa version)",
     "artist": "Petit Rabbit's",
-    "album": "Gochuumon wa Usagi Desu ka?"
+    "album": "Gochuumon wa Usagi Desu ka?",
+    "duration": 227,
+    "url": "assets/mp3/daydream_cafe_cocoa.mp3"
   }, {
     "coverImage": "assets/img/cover.jpg",
     "title": "Daydream Cafe (Chino version)",
     "artist": "Petit Rabbit's",
-    "album": "Gochuumon wa Usagi Desu ka?"
+    "album": "Gochuumon wa Usagi Desu ka?",
+    "duration": 227,
+    "url": "assets/mp3/daydream_cafe_chino.mp3"
   }, {
     "coverImage": "assets/img/cover.jpg",
     "title": "Daydream Cafe (Rize version)",
     "artist": "Petit Rabbit's",
-    "album": "Gochuumon wa Usagi Desu ka?"
+    "album": "Gochuumon wa Usagi Desu ka?",
+    "duration": 227,
+    "url": "assets/mp3/daydream_cafe_rize.mp3"
   }, {
     "coverImage": "assets/img/cover.jpg",
     "title": "Daydream Cafe (Sharo version)",
     "artist": "Petit Rabbit's",
-    "album": "Gochuumon wa Usagi Desu ka?"
+    "album": "Gochuumon wa Usagi Desu ka?",
+    "duration": 227,
+    "url": "assets/mp3/daydream_cafe_sharo.mp3"
   }, {
     "coverImage": "assets/img/cover.jpg",
     "title": "Daydream Cafe (Chiya version)",
     "artist": "Petit Rabbit's",
-    "album": "Gochuumon wa Usagi Desu ka?"
+    "album": "Gochuumon wa Usagi Desu ka?",
+    "duration": 227,
+    "url": "assets/mp3/daydream_cafe_chiya.mp3"
   }
 ]
