@@ -1,10 +1,10 @@
 angular.module('weesong')
 .controller('PlayerCtrl', function ($rootScope, $scope, $route) {
 // Get Current song from global scope / playlist.
-  var index           = $rootScope.playlist.current;
   var defaultPlaylist = $rootScope.playlist.songs;  // For un-random
-  var playlist        = $rootScope.playlist.songs.slice(); 
-  $scope.song         = playlist[index];
+  $scope.index        = $rootScope.playlist.current;
+  $scope.playlist     = $rootScope.playlist.songs.slice(); 
+  $scope.song         = $scope.playlist[$scope.index];
 
 /* Player elements. */
   $scope.player          = document.getElementById('player');
@@ -20,6 +20,13 @@ angular.module('weesong')
 
 /* Private variables */
   var audioTimer;
+
+/* Update time on load. */
+  $scope.$on('$routeChangeSuccess', function () {
+    $scope.player.elapsed = secondsToString(0);
+    $scope.player.total   = secondsToString($scope.song.duration);
+  });
+
 
 /* Move the progress bar according to the played % */
   // Update the bar on drag or click.
@@ -51,7 +58,7 @@ angular.module('weesong')
       if ($scope.player.loop === true){
         // Loop through the same song.
         $scope.player.play();
-      } else if(index !== (playlist.length - 1) ) {  
+      } else if($scope.index !== ($scope.playlist.length - 1) ) {  
         // Keep playing the rest of the playlist.
         $scope.playNext();
       } else {
@@ -75,16 +82,16 @@ angular.module('weesong')
 
   // Play next song on the playlist
   $scope.playNext = function () {
-    if(index < (playlist.length - 1) ) {
-      $scope.song = playlist[++index];
+    if($scope.index < ($scope.playlist.length - 1) ) {
+      $scope.song = $scope.playlist[++$scope.index];
       reloadAudio($scope.song);
     } 
   } 
 
   // Play prev song on the playlist
   $scope.playPrev = function () {
-    if(index > 0 ) {
-      $scope.song = playlist[--index];
+    if($scope.index > 0 ) {
+      $scope.song = $scope.playlist[--$scope.index];
       reloadAudio($scope.song);
     }
   }
@@ -95,8 +102,7 @@ angular.module('weesong')
   }
 
   $scope.setShuffle = function () {
-    var currentSong = playlist[index].title;
-    var newIndex;
+    var currentSong = $scope.playlist[$scope.index].title;
 
     // Change shuffle state.
     $scope.player.shuffle = !$scope.player.shuffle;
@@ -104,23 +110,25 @@ angular.module('weesong')
     // On shuffle state.
     if ($scope.player.shuffle) {
       // Shuffle the playlist.
-      playlist = shuffleArray(playlist);
+      $scope.playlist = shuffleArray($scope.playlist);
       
       // Get new index of the current song.
-      newIndex = findSong(playlist, currentSong);
+      $scope.index = findSong($scope.playlist, currentSong);
 
-      // Set the random element to be the first of the random playlist.
-      if(newIndex !== 0) { 
-        playlist = swapElements(playlist, newIndex, 0)
-        index = 0;
-      }
     }
     // Back to normal state.
     else {
       // Reset playlist to default.
-      playlist = defaultPlaylist.slice();
-      index = findSong(playlist, currentSong);
+      $scope.playlist = defaultPlaylist.slice();
+      $scope.index = findSong($scope.playlist, currentSong);
     }
+  }
+
+/* Handle playlist */
+  $scope.playOnClick = function ($index) {
+    $scope.index = $index;
+    $scope.player.playing = true;
+    reloadAudio($scope.playlist[$scope.index]);
   }
 
 

@@ -1,0 +1,82 @@
+/* Mobile-first view */
+  .Menu
+    background $tertiary_color
+    border-right 3px solid $tertiary_color
+    height 100%
+    left -50%
+    top 0
+    position fixed
+    transition all 300ms ease-in-out
+    width 50%
+
+  .Menu__item
+    border-bottom 1px solid white
+    cursor pointer
+    height 3em
+    padding-top 1em
+    text-align center
+    
+  .Menu__item:hover, .Menu__item.Active
+    background $primary_color
+    &:first-child
+      .Menu__link:after
+        color $tertiary_color 
+    
+  .Menu__item:first-child
+    font-size 1.8em
+    height 1.7em
+    padding-top .2em
+    .Menu__link:after
+      color $primary_color
+      content "song"
+      margin -.25em
+
+  .Menu__link
+    color white
+    user-select none
+
+/* Tablet view */
+@media screen and (min-width: $query_medium)
+  .Menu__item
+    font-size 1.8em
+    height 2em
+    padding-top .3em
+    &:first-child
+      font-size 2.5em
+      height 1.6em
+      padding-top .1em
+
+
+
+/* Desktop View*/
+  @media screen and (min-width: $query_large)
+    .Menu
+      background none
+      border-right none
+      display block
+      height auto
+      padding 0 5%
+      position static
+      width 100%
+    
+    .Menu__item 
+      border-bottom none
+      border-top 6px solid transparent
+      display inline-flex
+      height 1em
+      padding-top 0
+      transition all 200ms ease-in-out
+      &:hover, &.Active
+        background none
+        .Menu__link
+          color $dark_text
+      &.Active
+        background none
+        border-top 6px solid $secondary_color
+    .Menu__item:first-child
+      display none
+    .Menu__link
+      color $light_text
+      font-size .7em
+      padding 0 1em
+          

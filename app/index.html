@@ -9,7 +9,7 @@
 	<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700">
 	<link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body ng-controller="MainCtrl as Main">
+<body ng-controller="MainCtrl">
 <div class="Wrapper" ng-class="{'Move': menu.state}">
 
 <!-- Header ====================================-->
@@ -24,6 +24,7 @@
 			<span class="Header__user__username">
 				SampleUser
 			</span>
+			<span class="Header__user__button"></span>
 			<!-- User avatar ===================-->
 			<figure class="Header__user__image-container">
 				<img src="assets/img/user.jpg" class="Header__user__image">
@@ -38,13 +39,12 @@
 			<span class="Header__button__line" id="span3"></span>
 		</div>
 	</header>
-
-
+	
 <!-- Nav menu ==================================-->
 	<nav class="Menu Move">
 		<ul class="Menu__list">
 			<li class="Menu__item" ng-repeat="item in menu.items" ng-class="{'Active': item.id == menu.activeItem}" ng-click="selectOption(item)">
-				<span class="Menu__link"">
+				<span class="Menu__link">
 					{{ item.text }}
 				</span>
 			</li>
@@ -62,9 +62,6 @@
 <!-- Scripts ===================================-->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular-route.min.js"></script>
-	<script type="text/javascript" src="scripts/main.ctrl.js"></script>
-	<script type="text/javascript" src="scripts/routes.js"></script>
-	<script type="text/javascript" src="scripts/player.ctrl.js"></script>
-	<script type="text/javascript" src="scripts/playlist.ctrl.js"></script>
+	<script type="text/javascript" src="assets/scripts/app.js"></script>
 </body>
 </html>

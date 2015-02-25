@@ -1,0 +1,128 @@
+/* Mobile-first view */
+  .Header
+    background $primary_color
+    display flex
+    height 3em
+    justify-content space-between
+    flex-direction row-reverse
+    padding .5em 0em
+    transition all 300ms ease-in-out
+    width 100%
+    
+  .Header__button
+    cursor pointer
+    display flex
+    height 2em
+    margin .3em 1em
+    position relative
+    transition all 300ms ease-in-out
+    width 2.2em
+    
+  .Header__button__line
+    background white
+    border-radius 1px
+    height 4px
+    left 0.1em
+    position absolute
+    transition all 300ms ease-in-out
+    width 30px
+    &#span1
+      top .2em
+    &#span2
+      top .8em
+    &#span3
+      top 1.4em
+      
+  .Header__page-title
+    color white
+    font-size 1.5em
+    margin-right 1em
+    overflow hidden 
+    padding-left .5em
+    text-align right
+    text-overflow ellipsis
+    transition all 300ms ease-in-out
+    white-space nowrap
+    width 80%
+    
+  .Header__site-title
+    color $secondary_color
+    &--mod
+      color $primary_color
+    display none
+    
+  .Header__user
+    align-items center
+    display none
+    justify-content flex-end
+    width 40%
+  
+  .Header__user__username
+    color $dark_text
+
+  .Header__user__button
+    border-right 13px solid transparent
+    border-left 13px solid transparent
+    border-top 10px solid $light_text
+    cursor pointer
+    margin 0 .5em
+
+  .Header__user__image
+    border-radius 50%
+    height 100%   
+    width 100%   
+
+  .Header__user__image-container
+    height 50px
+    margin 0 1em
+    padding 0
+    width 50px
+
+
+
+/* Tablet  View*/
+  @media screen and (min-width: $query_medium)
+    .Header
+      height 4em
+      padding-top .1em
+      
+    .Header__button
+      height 4em
+      transition all 300ms ease-in-out
+      width 2.2em
+      
+    .Header__button__line
+      height 7px
+      width 50px
+      &#span1
+        top .2em
+      &#span2
+        top 1.2em
+      &#span3
+        top 2.2em
+        
+    .Header__page-title
+      font-size 2.3em
+
+
+
+/* Desktop View*/
+  @media screen and (min-width: $query_large)
+    .Header
+      background white
+      border-bottom 1px solid $secondary_color
+      flex-direction row
+      height 5em
+      padding  1.3em 15%
+    
+    .Header__site-title
+      display block
+      
+    .Header__user
+      display flex
+    
+    .Header__page-title
+      display none
+    
+    .Header__button
+      display none

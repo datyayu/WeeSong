@@ -1,0 +1,59 @@
+/* Header */
+@import "modules/header"
+
+/* Navigation */
+@import "modules/menu"
+
+/* Footer */
+// SOON TM
+
+/* Wrappers */
+// Mobile-first View
+  .Content
+    display flex
+    flex-direction column
+  
+  .Page
+    padding-bottom 2.5em
+  
+  .Wrapper
+    position relative
+    right 0
+    top 0
+    transition all 300ms ease-in-out
+    width 100%
+    &.Move
+      right -50%
+      .Header__button
+        margin 0 35%
+      #span1
+        top .55em
+        transform rotate(-45deg)
+        width 1em
+      #span2
+        left .4em
+      #span3
+        top 1.1em
+        transform rotate(45deg)
+        width 1em
+      .Menu
+        left 0
+  
+// Tablet View
+  @media screen and (min-width: $query_medium)
+    .Wrapper
+      &.Move // Show Menu
+        #span1
+          top .75em
+          width 1.5em
+        #span2
+          left .45em
+        #span3
+          top 1.55em
+          width 1.5em
+  
+// Desktop view
+  @media screen and (min-width: $query_large)
+    .Wrapper
+      &.Move
+        right 0

@@ -1,7 +1,7 @@
 var gulp    = require('gulp'),
-	connect = require('gulp-connect'),
-	stylus  = require('gulp-stylus'),
-	nib  	= require('nib')
+		connect = require('gulp-connect'),
+		stylus  = require('gulp-stylus'),
+		nib   	= require('nib')
 
 
 // Compile stylus to css
@@ -24,9 +24,9 @@ gulp.task('html', function () {
 
 
 // Watch for changes.
-gulp.task('[dev]::watch', ['css'], function () {
+gulp.task('[dev]::watch:styles', ['css'], function () {
 	/* Stylus changes */
-	gulp.watch('./app/stylus/*.styl', ['css'])
+	gulp.watch('./app/stylus/**/*.styl', ['css'])
 
 	/* Html changes */
 	gulp.watch([
