@@ -1,32 +1,32 @@
 /* Mobile-first view */
-  .Player__playlist
-    position relative
-    height 100%
-  .Player__playlist__list
-    background rgba(black, .7)
-    bottom -100%
-    height 100%
+  .Playlist-bar
+    border-left 3px solid $tertiary_color
+    transition all 300ms ease-in-out
     position fixed
+    top 0
+    right -50%
+    width 50%
+    height 100%
+  .Playlist-bar__list
+    background $tertiary_color
+    height 100%
     width 100%
     &.Active
       top 6em
       .Playlist__mobile__bar
          top 3em
-  .Player__playlist__mobile__bar
+  .Playlist-bar__mobile__bar
     background $tertiary_color
-    position absolute
-    bottom 0
-    left 0
     height 3em
     padding-top .5em
     text-align center
     width 100%
     
-  .Player__playlist__mobile__title
+  .Playlist-bar__mobile__title
     color white
     font-size 1.5em
 
-  .Player__playlist__item
+  .Playlist-bar__item
     background rgba(black, .5)
     display flex
     justify-content stretch
@@ -39,35 +39,38 @@
     &.Playing
       background rgba($primary_color, .8)
       
-  .Player__playlist__item__cover
+  .Playlist-bar__item__cover
     height 100%
     margin 0
     width auto
     
-  .Player__playlist__item__image
+  .Playlist-bar__item__image
     height 100%
     
-  .Player__playlist__item__info
+  .Playlist-bar__item__info
     flex-grow 1
     padding-left .3em
     padding-top .7em
     
-  .Player__playlist__item__text
+  .Playlist-bar__item__text
     color rgba(white, .8)
     font-size 1em
     &--artist, &--album
       color rgba(white, .5)
       font-size .8em
-
+  
+  .Move-left
+    .Playlist-bar
+      right 0
 
 
 /* Tablet  View*/
   @media screen and (min-width: $query_medium)
-    .Player__playlist__item
+    .Playlist-bar__item
       height 8em
       
-    .Player__playlist__item__info
+    .Playlist-bar__item__info
       padding-top 1em
       
-    .Player__playlist__item__text
+    .Playlist-bar__item__text
       font-size 1.6em
