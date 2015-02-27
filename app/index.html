@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body ng-controller="MainCtrl">
-<div class="Wrapper" ng-class="{'Move-right': menu.show, 'Move-left': playlist.show}">
+<div class="Wrapper" ng-class="{'Move': menu.state}">
 
 <!-- Header ====================================-->
 	<header class="Header">
@@ -18,37 +18,30 @@
 		<h1 class="Header__site-title">
 			Wee<span class="Header__site-title--mod">song</span>
 		</h1>
-	<!-- Menu mobile button ====================-->
-		<div class="Header__button-menu" ng-click="menu.show = !menu.show">
-			<span class="Header__button__line" id="span1"></span>
-			<span class="Header__button__line" id="span2"></span>
-			<span class="Header__button__line" id="span3"></span>
-		</div>
-	<!-- Page title on mobile ==================-->
-		<span class="Header__page-title" ng-click="playlist.show = !playlist.show">
-			{{ pageTitle }}
-		</span>
 	<!-- User info =============================-->
 		<div class="Header__user">
-		<!-- Username ============================-->
+			<!-- Username ======================-->
 			<span class="Header__user__username">
 				SampleUser
 			</span>
 			<span class="Header__user__button"></span>
-		<!-- User avatar =========================-->
+			<!-- User avatar ===================-->
 			<figure class="Header__user__image-container">
 				<img src="assets/img/user.jpg" class="Header__user__image">
 			</figure>
 		</div> <!-- /.User -->
-	<!-- Playlist-mobile button ================-->
-		<div class="Header__button-playlist" ng-click="playlist.show = !playlist.show">
-			<span class="Header__button__text">Playlist</span>
-			<span class="right-triangule"></span>
+	<!-- Page title on mobile ==================-->
+		<span class="Header__page-title">{{ pageTitle }}</span>
+	<!-- Menu mobile button ====================-->
+		<div class="Header__button" ng-click="menu.state = !menu.state">
+			<span class="Header__button__line" id="span1"></span>
+			<span class="Header__button__line" id="span2"></span>
+			<span class="Header__button__line" id="span3"></span>
 		</div>
 	</header>
 	
 <!-- Nav menu ==================================-->
-	<nav class="Menu">
+	<nav class="Menu Move">
 		<ul class="Menu__list">
 			<li class="Menu__item" ng-repeat="item in menu.items" ng-class="{'Active': item.id == menu.activeItem}" ng-click="selectOption(item)">
 				<span class="Menu__link">
