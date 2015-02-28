@@ -5,7 +5,7 @@ var gulp    = require('gulp'),
 
 
 // Compile stylus to css
-gulp.task('css', function () {
+gulp.task('[dev]::css', function () {
 	gulp.src('./app/stylus/styles.styl')
 		.pipe(stylus({
 			use: nib(),
@@ -24,13 +24,13 @@ gulp.task('html', function () {
 
 
 // Watch for changes.
-gulp.task('[dev]::watch:styles', ['css'], function () {
+gulp.task('[dev]::watch:styles', ['[dev]::css'], function () {
 	/* Stylus changes */
-	gulp.watch('./app/stylus/**/*.styl', ['css'])
+	gulp.watch('./app/stylus/**/*.styl', ['[dev]::css'])
 
 	/* Html changes */
 	gulp.watch([
-		'./app/layouts/**/*.html', 
+		'./app/layouts/**/*.html',
 		'./app/*.html'
 	], ['html'])
 })
