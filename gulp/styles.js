@@ -26,7 +26,7 @@ gulp.task('html', function () {
 // Watch for changes.
 gulp.task('[dev]::watch:styles', ['[dev]::css'], function () {
 	/* Stylus changes */
-	gulp.watch('./app/stylus/**/*.styl', ['css'])
+	gulp.watch('./app/stylus/**/*.styl', ['[dev]::css'])
 
 	/* Html changes */
 	gulp.watch([
