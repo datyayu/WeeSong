@@ -4,6 +4,7 @@ angular.module('weesong')
   var defaultPlaylist = $rootScope.playlist.songs;  // For un-random
   $scope.index        = $rootScope.playlist.current;
   $scope.playlist     = $rootScope.playlist.songs.slice(); 
+  $scope.playlistBar  = $rootScope.playlistBar;
   $scope.song         = $scope.playlist[$scope.index];
 
 /* Player elements. */

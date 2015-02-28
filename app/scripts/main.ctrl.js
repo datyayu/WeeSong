@@ -8,13 +8,14 @@ angular.module('weesong')
 .controller('MainCtrl', function ($scope, $rootScope, $location) {
 /* Global app config */
   $rootScope.playlist = {};
-
+  $rootScope.playlist.show = false;
 /* Menu */
   $scope.pageTitle = 'Weesong'; // Inital Page name
 
   /* Menu states */
   $scope.menu = {};
-  $scope.menu.state = false;
+  $scope.menu.show = false;
+  $scope.playlist = $rootScope.playlist;
   $scope.menu.activeItem = 'item1';
   
   // Menu Items
@@ -45,7 +46,7 @@ angular.module('weesong')
   // Handle click on menu.
   $scope.selectOption = function (item) {
     $scope.$emit('tabChange', item)
-    $scope.menu.state = false;
+    $scope.menu.show = false;
     $location.path(item.url);
   }
 
