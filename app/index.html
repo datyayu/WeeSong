@@ -10,22 +10,27 @@
 	<link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body ng-controller="MainCtrl">
-<div class="Wrapper" ng-class="{'Move-right': menu.show, 'Move-left': playlist.show}">
+<!-- Audio metadata -->
+<audio id="player"></audio>
+
+<div class="Wrapper" 
+		 ng-class="{'Move-right': showMenu, 'Move-left': playlist.show}">
 
 <!-- Header ====================================-->
-	<header class="Header">
+	<header class="Header" ng-controller="HeaderCtrl">
 	<!-- Logo / Title ==========================-->
 		<h1 class="Header__site-title">
 			Wee<span class="Header__site-title--mod">song</span>
 		</h1>
 	<!-- Menu mobile button ====================-->
-		<div class="Header__button-menu" ng-click="menu.show = !menu.show">
-			<span class="Header__button__line" id="span1"></span>
-			<span class="Header__button__line" id="span2"></span>
-			<span class="Header__button__line" id="span3"></span>
+		<div class="Header__button-menu" 
+				 ng-click="toggleMenu()">
+			<span class="Header__button__line"></span>
+			<span class="Header__button__line"></span>
+			<span class="Header__button__line"></span>
 		</div>
 	<!-- Page title on mobile ==================-->
-		<span class="Header__page-title" ng-click="playlist.show = !playlist.show">
+		<span class="Header__page-title">
 			{{ pageTitle }}
 		</span>
 	<!-- User info =============================-->
@@ -41,16 +46,23 @@
 			</figure>
 		</div> <!-- /.User -->
 	<!-- Playlist-mobile button ================-->
-		<div class="Header__button-playlist" ng-click="playlist.show = !playlist.show">
-			<span class="Header__button__text">Playlist</span>
-			<span class="right-triangule"></span>
+		<div class="Header__button-playlist" 
+				ng-if="" 
+				ng-click="playlist.show = !playlist.show">
+			<span class="Header__button__line"></span>
+			<span class="Header__button__line"></span>
+			<span class="Header__button__line"></span>
 		</div>
 	</header>
 	
 <!-- Nav menu ==================================-->
-	<nav class="Menu">
-		<ul class="Menu__list">
-			<li class="Menu__item" ng-repeat="item in menu.items" ng-class="{'Active': item.id == menu.activeItem}" ng-click="selectOption(item)">
+	<nav class="Menu"
+			 ng-class="{'move-left': showMenu}">
+		<ul class="Menu__list" ng-controller="menuCtrl">
+			<li class="Menu__item"
+					ng-repeat="item in menuItems" 
+					ng-class="{'Active': item.id == activeItem}" 
+					ng-click="selectOption(item)">
 				<span class="Menu__link">
 					{{ item.text }}
 				</span>
@@ -58,15 +70,19 @@
 		</ul>
 	</nav>
 
+<!-- Fade-In block ============================-->
+	<div class="Menu__content-blocker"
+			 ng-class="{'Active': showMenu}"
+			 ng-click="hideMenu($event)"></div>
 
 <!-- Content ==================================-->
 	<div class="Content" ng-view>
 	</div><!-- /.Content -->
-
 </div> <!-- /.Wrapper -->
 
 
 <!-- Scripts ===================================-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.3.1/lodash.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular-route.min.js"></script>
 	<script type="text/javascript" src="assets/scripts/app.js"></script>

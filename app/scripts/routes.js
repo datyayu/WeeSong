@@ -1,3 +1,8 @@
+/* Dependencies */
+angular.module('weesong', [
+  'ngRoute'
+]);
+
 angular.module('weesong')
 .config(function ($routeProvider, $locationProvider) {
   $routeProvider

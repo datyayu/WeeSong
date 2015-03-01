@@ -1,6 +1,6 @@
 <section class="Page Playlist">
   <ul class="Playlist__list">
-    <li class="Playlist__item" ng-repeat="song in playlist" ng-click="play($index)">
+    <li class="Playlist__item" ng-repeat="song in playlist.songs" ng-click="play($index)">
       <figure class="Playlist__item__cover">
         <img class="Playlist__item__image" ng-src="{{ song.coverImage }}">
       </figure>
