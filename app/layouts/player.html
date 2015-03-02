@@ -1,23 +1,30 @@
 <section class="Page Player">
 <!-- Cover -->
   <figure class="Player__cover">
-      <img class="Player__cover__image" ng-src="{{ song.coverImage }}">
+      <img class="Player__cover__image" 
+           ng-src="{{ song.coverImage }}">
   </figure>
 <!-- Info -->
   <div class="Player__info">
-    <p class="Player__info__text Player__text--track">
+    <p class="Player__info__text 
+              Player__text--track">
       {{ song.title }}
     </p>
-    <p class="Player__info__text Player__text--artist">
+    <p class="Player__info__text 
+              Player__text--artist">
       {{ song.artist }}
     </p>
-    <p class="Player__info__text Player__text--album">
+    <p class="Player__info__text 
+              Player__text--album">
       {{ song.album }}
     </p>
   </div> <!-- /.Player__info -->
 <!-- Progress bar -->
-  <div class="Player__progress-bar" id="timeline" ng-click="changeTrackPos($event)">
-    <div class="Player__progress-bar__current-progress" id="currentProgress">
+  <div class="Player__progress-bar" 
+        id="timeline" 
+        ng-click="changeTrackPos($event)">
+    <div class="Player__progress-bar__current-progress" 
+         id="currentProgress">
       <div class="Player__progress-bar__dot"></div>
     </div>
   </div>
@@ -25,7 +32,6 @@
     {{ elapsedTime }} / {{ totalTime }}
   </div>
 <!-- Controls -->
-  {{}}
   <div class="Player__controls">
     <span class="Player__controls__icon icon-loop"
           ng-class="{'Active': playerLooped}" 
@@ -33,7 +39,7 @@
     <span class="Player__controls__icon icon-backward" 
           ng-click="playPrev()"></span>
     <span class="Player__controls__icon" 
-          ng-class="playing ? 'icon-pause' : 'icon-play'"
+          ng-class="isPlaying ? 'icon-pause' : 'icon-play'"
           ng-click="play()"></span>
     <span class="Player__controls__icon icon-forward" 
           ng-click="playNext()"></span>
@@ -45,19 +51,25 @@
 
 
 <!-- Small Side Playlist bar -->
-<section class="Page Playlist-bar" ng-controller="PlaylistBarCtrl">
+<section class="Page Playlist-bar Move-left" 
+          ng-controller="PlaylistBarCtrl">
   <!-- Bar title -->
   <div class="Playlist-bar__mobile__bar">
     <span class="Playlist-bar__mobile__title"> Current Playlist </span>
   </div>
   <!-- Playlist -->
   <ul class="Playlist-bar__list">
-    <li class="Playlist-bar__item" ng-class="{'Playing': index === $index}" ng-repeat="song in playlist" ng-click="play($index)">
+    <li class="Playlist-bar__item" 
+        ng-repeat="song in playlist" 
+        ng-class="{'Playing': index === $index}" 
+        ng-click="play($index)">
       <div class="Playlist-bar__item__info">
-        <p class="Playlist-bar__item__text Playlist-bar__item__text--title">
+        <p class="Playlist-bar__item__text 
+                  Playlist-bar__item__text--title">
           {{ song.title }}
         </p>
-        <p class="Playlist-bar__item__text Playlist-bar__item__text--artist">
+        <p class="Playlist-bar__item__text 
+                  Playlist-bar__item__text--artist">
           {{ song.artist }}
         </p>
       </div>

@@ -3,14 +3,14 @@ angular.module('weesong')
   var svc = this;
 
 /* Export variables */
-  var _player = document.getElementById('player');
+  var _player   = document.getElementById('player');
   var _playlist = {};
+  var _index    = 0;
   var _currentSong;
 
 
 /* Player state variables */
   var _defaultPlaylist; // Create a copy before randomize it.
-  var _index           = 0;
   var _playerIsLooped  = false;
   var _playerIsRandom  = false;
   var _playerIsPlaying = false;
@@ -33,7 +33,7 @@ angular.module('weesong')
 
 /* Setters */
   svc.setPlaylist = function (playlist) {
-   _playlist = playlist; 
+    _playlist = playlist; 
   };
 
   svc.setCurrentTime = function (time) {
@@ -54,9 +54,9 @@ angular.module('weesong')
   }
 
 
-/* Custom events */
-  svc.onEvent = function (event, cb) {
-    _player.addEventListener("timeupdate", cb, false);
+/* Custom events on Player */
+  svc.onEvent = function (e, cb) {
+    _player.addEventListener(e, cb, false);
   } 
 
 
@@ -64,11 +64,11 @@ angular.module('weesong')
   // Handle the end of the songs.
   _player.addEventListener('ended', function () {
     // Loop through the same song.
-    if (_playerIsLooped) {
+    if ( _playerIsLooped ) {
       svc.play();
     }
     // Keep playing the rest of the playlist.
-    else if(_index !== (_playlist.songs.length - 1) ) {
+    else if ( _index !== (_playlist.songs.length - 1) ) {
       svc.playNext();
     }
     //Stop Playing since it reached the playlist's end.
@@ -81,9 +81,9 @@ angular.module('weesong')
 
 
 /* Player manipulation methods */
-  // Play pause the current song.
+  // Play/pause the current song.
   svc.play = function () {
-    if (_player.paused) {
+    if ( _player.paused ) {
       _player.play();
       _playerIsPlaying = true;
     } else {
@@ -92,26 +92,31 @@ angular.module('weesong')
     }
   };
 
+
+  // Pause the current song.
   svc.pause = function () {
       _player.pause();
       _playerIsPlaying = false;
   };
 
+
   // Play next song on the playlist
   svc.playNext = function (scope) {
-    if(_index < (_playlist.songs.length - 1) ) {
+    if ( _index < (_playlist.songs.length - 1) ) {
       _currentSong = _playlist.songs[++_index];
       reloadAudio(_currentSong);
     }
   }
 
+
   // Play prev song on the playlist
   svc.playPrev = function () {
-    if(_index > 0 ) {
+    if ( _index > 0 ) {
       _currentSong = _playlist.songs[--_index];
       reloadAudio(_currentSong);
     }
   }
+
 
   // Play the song at 'index' position in current playlist.
   svc.playSongAt = function (index) {
@@ -122,20 +127,26 @@ angular.module('weesong')
     reloadAudio(_currentSong);
   }
 
+
   // Shuffles / Unshuffles the playlist.
   svc.shufflePlaylist = function () {
     // Change to Shuffle State.
-    if (_playerIsRandom ) {
+    if ( _playerIsRandom ) {
       _defaultPlaylist = _.clone(_playlist.songs, true);
       _playlist.songs  = _.shuffle(_playlist.songs);
-      _index           = _.find(_playlist.songs, _currentSong);
+      _index           = _.findIndex(_playlist.songs, _currentSong);
     } 
     // Back to normal state.
     else {
       _playlist.songs = _defaultPlaylist;
-      _index          = _.find(_playlist.songs, _currentSong);
+      _index          = _.findIndex(_playlist.songs, _currentSong);
     }
+
+
+    // Broadcast a event to update playlist on controllers.
+    $rootScope.$broadcast('playlistShuffled');
   }
+
 
 
 /* Utility functions */
@@ -143,10 +154,7 @@ angular.module('weesong')
     _player.src = song.url; // Make sure it has the right song.
     _player.load();
 
-    // _player.oncanplaythrough = function () {
-    //   if (_playerIsPlaying) { _player.play(); }
-    // }
     player.play(); 
-    
+    $rootScope.$broadcast('changeSong');
   }
 });

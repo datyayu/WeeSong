@@ -14,7 +14,8 @@
 <audio id="player"></audio>
 
 <div class="Wrapper" 
-		 ng-class="{'Move-right': showMenu, 'Move-left': playlist.show}">
+		 ng-class="{'Move-right': showMenu, 
+		 						'Move-left': showPlaylist}">
 
 <!-- Header ====================================-->
 	<header class="Header" ng-controller="HeaderCtrl">
@@ -47,8 +48,8 @@
 		</div> <!-- /.User -->
 	<!-- Playlist-mobile button ================-->
 		<div class="Header__button-playlist" 
-				ng-if="" 
-				ng-click="playlist.show = !playlist.show">
+				ng-show="route === '/player'"
+				ng-click="togglePlaylist()">
 			<span class="Header__button__line"></span>
 			<span class="Header__button__line"></span>
 			<span class="Header__button__line"></span>
@@ -72,7 +73,7 @@
 
 <!-- Fade-In block ============================-->
 	<div class="Menu__content-blocker"
-			 ng-class="{'Active': showMenu}"
+			 ng-class="{'Active': showMenu || showPlaylist}"
 			 ng-click="hideMenu($event)"></div>
 
 <!-- Content ==================================-->

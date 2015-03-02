@@ -3,4 +3,8 @@ angular.module('weesong')
   $scope.toggleMenu = function () {
     $scope.$emit('toggleMenu');
   };
+
+  $scope.togglePlaylist = function () {
+    $scope.$emit('togglePlaylist');
+  }
 });

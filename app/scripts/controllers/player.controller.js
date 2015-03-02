@@ -1,13 +1,14 @@
 angular.module('weesong')
-.controller('PlayerCtrl', function ($scope, PlayerSvc) {
+.controller('PlayerCtrl', function ($scope, $location, PlayerSvc) {
 /* Variables*/
   /* Player state variables */
   $scope.song = PlayerSvc.getCurrentSong();
-  $scope.playing = PlayerSvc.isPlaying();
+  $scope.isPlaying = PlayerSvc.isPlaying();
   $scope.elapsedTime = secondsToString(PlayerSvc.getCurrentTime());
   $scope.totalTime = secondsToString(PlayerSvc.getDuration());
   $scope.playerLooped = false;
   $scope.playerShuffled = false;
+  $scope.shufflePlaylist = false;
 
   /* Player elements variables. */
   var timeline        = document.getElementById('timeline');
@@ -17,18 +18,23 @@ angular.module('weesong')
   var audioTimer;
 
 /* Update times on load */
-  updateTime();
+  $scope.$on('$routeChangeStart', function () {
+    if ($location.path() === '/player') {
+      updateTime();
+    }
+  });
+
 
 /* Events */
   // Handle the end of the songs.
   PlayerSvc.onEvent('ended', function () {
-    if (PlayerSvc.getIndex() !== (PlayerSvc.getPlaylistLength() - 1) ) {
-      $scope.playing = true;
-      $scope.song =  PlayerSvc.getCurrentSong();
-    }
     //Stop Playing since it reached the playlist's end.
-    else if (PlayerSvc.isPaused() ){
-      $scope.playing = false;
+    if (PlayerSvc.isPaused() ){
+      $scope.isPlaying = false;
+    } 
+    else if (PlayerSvc.getIndex() !== (PlayerSvc.getPlaylistLength() - 1) ) {
+      $scope.isPlaying = true;
+      $scope.song =  PlayerSvc.getCurrentSong();
     }
   }, false);
 
@@ -66,11 +72,10 @@ angular.module('weesong')
   $scope.play = function () {
     if ( PlayerSvc.isPaused() ) {
       PlayerSvc.play();
-      $scope.playing = true;
     } else {
       PlayerSvc.pause();
-      $scope.playing = false;
     }
+    $scope.isPlaying = PlayerSvc.isPlaying();
   };
 
   // Play next song on the playlist
@@ -122,7 +127,7 @@ angular.module('weesong')
   function secondsToString (seconds) {
     if (seconds !== undefined && !isNaN(seconds)) {
       var mins = Math.floor(seconds / 60);
-      var secs = Math.floor(seconds % 60);
+      var secs = Math.ceil(seconds % 60);
       return( ("0" + mins.toString()).slice(-2) +  ":" +
             ("0" + secs.toString()).slice(-2)
           );

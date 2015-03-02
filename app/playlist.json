@@ -24,11 +24,11 @@
       "url": "assets/mp3/daydream_cafe_rize.mp3"
     }, {
       "coverImage": "assets/img/cover.jpg",
-      "title": "Daydream Cafe (Sharo version)",
+      "title": "Daydream Cafe (Chiya version)",
       "artist": "Petit Rabbit's",
       "album": "Gochuumon wa Usagi Desu ka?",
       "duration": 227,
-      "url": "assets/mp3/daydream_cafe_sharo.mp3"
+      "url": "assets/mp3/daydream_cafe_chiya.mp3"
     }, {
       "coverImage": "assets/img/cover.jpg",
       "title": "Daydream Cafe (Chiya version)",
@@ -36,6 +36,13 @@
       "album": "Gochuumon wa Usagi Desu ka?",
       "duration": 227,
       "url": "assets/mp3/daydream_cafe_chiya.mp3"
+    }, {
+      "coverImage": "assets/img/cover.jpg",
+      "title": "Daydream Cafe (Sharo version)",
+      "artist": "Petit Rabbit's",
+      "album": "Gochuumon wa Usagi Desu ka?",
+      "duration": 227,
+      "url": "assets/mp3/daydream_cafe_sharo.mp3"
     }
   ]
 }

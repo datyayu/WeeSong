@@ -1,8 +1,10 @@
 /* Main Ctrl */
 angular.module('weesong')
-.controller('MainCtrl', function ($scope, $location) {
+.controller('MainCtrl', function ($scope, $location, PlayerSvc) {
   $scope.pageTitle = "Weesong";
+  $scope.route = $location.path();
   $scope.showMenu = false;
+  $scope.showPlaylist = false;
   
 
 /* Event Listeners */
@@ -10,6 +12,7 @@ angular.module('weesong')
   $scope.$on('pageChange', function (_, page) {
     $scope.showMenu = false;
     $location.path(page.url);
+    $scope.route = $location.path();
 
     if (page.text === undefined) {
       $scope.pageTitle = 'Now Playing'
@@ -25,10 +28,15 @@ angular.module('weesong')
     $scope.showMenu = !$scope.showMenu;
   });
 
- /* Scope functions */
+  $scope.$on('togglePlaylist', function () {
+    $scope.showPlaylist = !$scope.showPlaylist;
+  });
+
+/* Scope functions */
   $scope.hideMenu = function (e) {
     e.stopPropagation();
 
     $scope.showMenu = false;
+    $scope.showPlaylist = false;
   } 
 });
