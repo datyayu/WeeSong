@@ -24,6 +24,10 @@ angular.module('weesong')
     }
   });
 
+  $scope.$on('changeSong', function () {
+    $scope.isPlaying = PlayerSvc.isPlaying();
+  });
+
 
 /* Events */
   // Handle the end of the songs.
@@ -122,6 +126,8 @@ angular.module('weesong')
         $scope.totalTime = secondsToString(PlayerSvc.getDuration());
       }
     });
+
+    $scope.isPlaying = PlayerSvc.isPlaying();
   }
 
   function secondsToString (seconds) {

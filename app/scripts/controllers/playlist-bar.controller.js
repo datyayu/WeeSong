@@ -12,7 +12,6 @@ angular.module('weesong')
   $scope.$on('playlistShuffled', function () {
     $scope.playlist = PlayerSvc.getPlaylist();
     $scope.index    = PlayerSvc.getIndex();
-    console.log( $scope.index );
   });
 
 

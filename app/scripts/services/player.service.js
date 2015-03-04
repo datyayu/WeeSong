@@ -122,7 +122,6 @@ angular.module('weesong')
   svc.playSongAt = function (index) {
     _index       = index;
     _currentSong = _playlist.songs[index];
-    _playerIsPlaying = true;
 
     reloadAudio(_currentSong);
   }
@@ -153,8 +152,9 @@ angular.module('weesong')
   function reloadAudio (song) {
     _player.src = song.url; // Make sure it has the right song.
     _player.load();
-
-    player.play(); 
+    _playerIsPlaying = true;
+    _player.play(); 
+    
     $rootScope.$broadcast('changeSong');
   }
 });
