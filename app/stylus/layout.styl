@@ -26,6 +26,16 @@
     &.Move-left
       right 50%
   
+  .Content-blocker
+    &.Active
+      position fixed
+      top 0em
+      left 0
+      height 100vh
+      width 100%
+      overflow-y hidden
+      background rgba(black,.4)
+  
 // Tablet View
   @media screen and (min-width: $query_medium)
     .Wrapper
@@ -41,6 +51,17 @@
   
 // Desktop view
   @media screen and (min-width: $query_large)
+    .Content
+      flex-direction row
+      justify-content space-around
+      position relative
+      width 90%
+      margin 0 auto
     .Wrapper
-      &.Move
+      &.Move-right
         right 0
+      &.Move-left
+        right 0
+    .Content-blocker
+      &.Active
+        display none

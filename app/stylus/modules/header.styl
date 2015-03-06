@@ -3,7 +3,7 @@
     background $primary_color
     display flex
     height 3em
-    justify-content space-between
+    align-items stretch
     flex-direction row
     padding .5em 0em
     transition all 300ms ease-in-out
@@ -60,6 +60,7 @@
     font-size 1.5em
     overflow hidden 
     padding-left .5em
+    align-self center
     text-align center
     text-overflow ellipsis
     transition all 300ms ease-in-out
@@ -115,7 +116,6 @@
         
   .Move-left
     .Header__button-playlist
-      // transform rotate(-180deg)
       .Header__button__line
         &:nth-child(1)
           left -.7em
@@ -137,25 +137,72 @@
     .Header
       height 4em
       padding-top .1em
-      
-    .Header__button
+    
+    .Header__button-menu
       height 4em
       transition all 300ms ease-in-out
       width 2.2em
-      
-    .Header__button__line
-      height 7px
-      width 50px
-      &:nth-child(1)
-        top .2em
-      &:nth-child(2)
-        top 1.2em
-      &:nth-child(3)
-        top 2.2em
-        
-    .Header__page-title
-      font-size 2.3em
+      margin-top .5em
+      .Header__button__line
+        height 7px
+        width 50px
+        &:nth-child(1)
+          top .2em
+        &:nth-child(2)
+          top 1.2em
+        &:nth-child(3)
+          top 2.2em
+     
+    .Header__button-playlist
+      .Header__button__line
+        height .5em
+        width 2em
+        &:nth-child(1)
+          left 1.8em
+          top 1.15em
+          width 1.5em
+        &:nth-child(2)
+          top 1.5em
+          left .5em
+          width 2.5em
+        &:nth-child(3)
+          top 1.9em
+          left 1.8em
+          width 1.5em
 
+    .Header__page-title
+      font-size 2.5em
+    
+    .Move-right
+      .Header__button__line
+        &:nth-child(1)
+          left .7em
+          top .75em
+          transform rotate(-45deg)
+          width 1.5em
+        &:nth-child(2)
+          left 1em
+        &:nth-child(3)
+          left .7em
+          top 1.5em
+          transform rotate(45deg)
+          width 1.5em
+
+    .Move-left
+      .Header__button-playlist
+        .Header__button__line
+          &:nth-child(1)
+            left -1.4em
+            top 1.15em
+            transform rotate(-45deg)
+            width 1.5em
+          &:nth-child(2)
+            left -1em
+          &:nth-child(3)
+            left -1.4em
+            top 1.9em
+            transform rotate(45deg)
+            width 1.5em
 
 
 /* Desktop View*/
@@ -163,8 +210,8 @@
     .Header
       background white
       border-bottom 1px solid $secondary_color
-      flex-direction row
       height 5em
+      justify-content space-between
       padding  1.3em 15%
     
     .Header__site-title
@@ -173,8 +220,8 @@
     .Header__user
       display flex
     
-    .Header__page-title
-      display none
-    
-    .Header__button
+    .Header__page-title,
+    .Header__button,
+    .Header__button-playlist,
+    .Header__button-menu
       display none

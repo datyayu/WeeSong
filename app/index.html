@@ -31,9 +31,9 @@
 			<span class="Header__button__line"></span>
 		</div>
 	<!-- Page title on mobile ==================-->
-		<span class="Header__page-title">
+		<div class="Header__page-title">
 			{{ pageTitle }}
-		</span>
+		</div>
 	<!-- User info =============================-->
 		<div class="Header__user">
 		<!-- Username ============================-->
@@ -72,7 +72,7 @@
 	</nav>
 
 <!-- Fade-In block ============================-->
-	<div class="Menu__content-blocker"
+	<div class="Content-blocker"
 			 ng-class="{'Active': showMenu || showPlaylist}"
 			 ng-click="hideMenu($event)"></div>
 

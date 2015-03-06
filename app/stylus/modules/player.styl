@@ -86,3 +86,37 @@
     .Player__progress-time
       font-size 1.5em
       margin-bottom 1em
+
+
+
+/* Desktop View */
+  @media screen and (min-width: $query_large)
+    .Player
+      margin-top 1em
+      width 50%
+      border-right 1px solid $secondary_color
+    .Player__cover
+      width 300px  
+      height 300px 
+    .Player__info__text
+      font-size 1.2em
+      margin .1em
+    .Player__progress-bar
+      width 70%
+      height .5em
+    .Player__progress-bar__dot
+      width 1em
+      height 1em
+      top -.25em
+    .Player__progress-time
+      font-size 1.1em
+    .Player__controls
+      position absolute
+      top 2em
+      right 4.5%
+      width 50%
+      justify-content space-around
+      font-size .5em   
+      padding-bottom 3em
+      border-bottom 1px solid $secondary_color
+     

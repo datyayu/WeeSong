@@ -31,6 +31,7 @@
 
   .Playlist-bar__item
     background rgba(black, .5)
+    cursor pointer
     display flex
     flex-direction column
     justify-content center
@@ -42,14 +43,8 @@
       background rgba(black, .7)
     &.Playing
       background rgba($primary_color, .8)
-
-  .Playlist-bar__item__cover
-    height 100%
-    margin 0
-    width auto
-
-  .Playlist-bar__item__image
-    height 100%
+      .Playlist-bar__item__text--title:before
+        content "\25ba"
 
   .Playlist-bar__item__text
     color rgba(white, .8)
@@ -65,7 +60,7 @@
       right 0
 
 
-/* Tablet  View*/
+/* Tablet View*/
   @media screen and (min-width: $query_medium)
     .Playlist-bar__item
       height 8em
@@ -75,3 +70,45 @@
 
     .Playlist-bar__item__text
       font-size 1.6em
+    
+    .Playlist-bar__mobile__bar
+      height 2em
+      font-size 2em
+      padding-top .2em
+      
+
+/* Desktop View*/
+  @media screen and (min-width: $query_large)
+    .Playlist-bar
+      margin 6em 5% 0 5%
+      display block
+      position static
+      width 60%
+      border none
+    .Playlist-bar__list
+      max-height 50vh
+      background none
+    .Playlist-bar__mobile__bar
+      background $primary_color
+    .Playlist-bar__item
+      border-bottom 1px solid $secondary_color
+      background none
+      justify-content center
+      height 4em
+      overflow hidden
+      text-align center
+      &:nth-child(odd)
+        background none
+      &.Playing
+        background rgba($secondary_color, .3) 
+        .Playlist-bar__item__text--title:before
+          content "\25ba"
+    .Playlist-bar__item__text
+      color $dark_text
+      font-size 1em
+    .Playlist-bar__item__info
+      padding-top 0
+
+
+      
+
