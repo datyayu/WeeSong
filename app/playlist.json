@@ -1,5 +1,11 @@
 {
-  "info": {},
+  "info": {
+    "coverImage": "assets/img/cover.jpg",
+    "title": "Gochiusa songs",
+    "author": "@datyayu",
+    "songNumber": 6,
+    "date": "March 2015"
+  },
   "songs": [
     {
       "coverImage": "assets/img/cover.jpg",

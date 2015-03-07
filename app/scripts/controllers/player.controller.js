@@ -1,14 +1,16 @@
 angular.module('weesong')
 .controller('PlayerCtrl', function ($scope, $location, PlayerSvc) {
 /* Variables*/
-  /* Player state variables */
-  $scope.song = PlayerSvc.getCurrentSong();
-  $scope.isPlaying = PlayerSvc.isPlaying();
+  /* Player info variables */
+  $scope.song        = PlayerSvc.getCurrentSong();
   $scope.elapsedTime = secondsToString(PlayerSvc.getCurrentTime());
-  $scope.totalTime = secondsToString(PlayerSvc.getDuration());
-  $scope.playerLooped = false;
-  $scope.playerShuffled = false;
-  $scope.shufflePlaylist = false;
+  $scope.totalTime   = secondsToString(PlayerSvc.getDuration());
+  
+  /* Player state variables */
+  $scope.isPlaying       = PlayerSvc.isPlaying();
+  $scope.playerLooped    = false;
+  $scope.playerShuffled  = false;
+
 
   /* Player elements variables. */
   var timeline        = document.getElementById('timeline');
@@ -18,14 +20,17 @@ angular.module('weesong')
   var audioTimer;
 
 /* Update times on load */
+  // Get time on load.
   $scope.$on('$routeChangeStart', function () {
     if ($location.path() === '/player') {
       updateTime();
     }
   });
 
+  // Update info on song change.
   $scope.$on('changeSong', function () {
     $scope.isPlaying = PlayerSvc.isPlaying();
+    $scope.song      = PlayerSvc.getCurrentSong();
   });
 
 
@@ -59,7 +64,7 @@ angular.module('weesong')
 
 /* Make the progress bar clickeable */
   $scope.changeTrackPos = function (e) {
-    var currentProgress = e.pageX - timeline.offsetLeft;
+    var currentProgress = e.pageX - timeline.getBoundingClientRect().left;
     var clickPercent = currentProgress / timeline.clientWidth;
 
     PlayerSvc.setCurrentTime(PlayerSvc.getDuration() * clickPercent);
@@ -115,6 +120,7 @@ angular.module('weesong')
 
 
 /* Utility functions */
+  // Update the playerCtrl state to the one on the playerSvc.
   function updateTime () {
     var playPercent = 100 * (PlayerSvc.getCurrentTime() / PlayerSvc.getDuration());
       currentTimeline.style.width = playPercent + "%";
@@ -122,6 +128,7 @@ angular.module('weesong')
     $scope.$apply(function () {
       $scope.elapsedTime = secondsToString(PlayerSvc.getCurrentTime());
 
+      // Get total duration time if it doesn't have it yet.
       if (isNaN($scope.totalTime)) {
         $scope.totalTime = secondsToString(PlayerSvc.getDuration());
       }
@@ -130,6 +137,7 @@ angular.module('weesong')
     $scope.isPlaying = PlayerSvc.isPlaying();
   }
 
+  // Convert from seconds to a string with the MIN:SEC format. 
   function secondsToString (seconds) {
     if (seconds !== undefined && !isNaN(seconds)) {
       var mins = Math.floor(seconds / 60);
@@ -138,7 +146,8 @@ angular.module('weesong')
             ("0" + secs.toString()).slice(-2)
           );
     } else {
-      return "--:--"
+      // If the service doesn't has any info yet, inform the user that has to wait.
+      return "Loading..."; 
     }
   }
 });

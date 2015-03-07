@@ -23,31 +23,27 @@
     width 100%
     &.Move-right
       right -50%
+      .Content-blocker
+          right 0
     &.Move-left
       right 50%
+      .Content-blocker
+          left 0
+
   
   .Content-blocker
+    opacity 0
+    transition all 300ms ease-in-out
+    width 100%
     &.Active
       position fixed
       top 0em
-      left 0
+      opacity 1
       height 100vh
-      width 100%
+      width 50%
       overflow-y hidden
       background rgba(black,.4)
   
-// Tablet View
-  @media screen and (min-width: $query_medium)
-    .Wrapper
-      &.Move // Show Menu
-        #span1
-          top .75em
-          width 1.5em
-        #span2
-          left .45em
-        #span3
-          top 1.55em
-          width 1.5em
   
 // Desktop view
   @media screen and (min-width: $query_large)

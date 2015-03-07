@@ -15,10 +15,11 @@
 
 <div class="Wrapper" 
 		 ng-class="{'Move-right': showMenu, 
-		 						'Move-left': showPlaylist}">
+		 						'Move-left' : showPlaylist}">
 
 <!-- Header ====================================-->
-	<header class="Header" ng-controller="HeaderCtrl">
+	<header class="Header" 
+					ng-controller="HeaderCtrl">
 	<!-- Logo / Title ==========================-->
 		<h1 class="Header__site-title">
 			Wee<span class="Header__site-title--mod">song</span>
@@ -43,13 +44,14 @@
 			<span class="Header__user__button"></span>
 		<!-- User avatar =========================-->
 			<figure class="Header__user__image-container">
-				<img src="assets/img/user.jpg" class="Header__user__image">
+				<img class="Header__user__image" 
+						 src="assets/img/user.jpg">
 			</figure>
 		</div> <!-- /.User -->
 	<!-- Playlist-mobile button ================-->
 		<div class="Header__button-playlist" 
-				ng-show="route === '/player'"
-				ng-click="togglePlaylist()">
+				 ng-show="route === '/player'"
+				 ng-click="togglePlaylist()">
 			<span class="Header__button__line"></span>
 			<span class="Header__button__line"></span>
 			<span class="Header__button__line"></span>
@@ -59,7 +61,8 @@
 <!-- Nav menu ==================================-->
 	<nav class="Menu"
 			 ng-class="{'move-left': showMenu}">
-		<ul class="Menu__list" ng-controller="menuCtrl">
+		<ul class="Menu__list" 
+				ng-controller="menuCtrl">
 			<li class="Menu__item"
 					ng-repeat="item in menuItems" 
 					ng-class="{'Active': item.id == activeItem}" 
@@ -74,7 +77,8 @@
 <!-- Fade-In block ============================-->
 	<div class="Content-blocker"
 			 ng-class="{'Active': showMenu || showPlaylist}"
-			 ng-click="hideMenu($event)"></div>
+			 ng-click="hideMenu($event)">
+	</div>
 
 <!-- Content ==================================-->
 	<div class="Content" ng-view>

@@ -2,6 +2,7 @@ angular.module('weesong')
 .service('PlaylistSvc', function ($http, $q) {
   var svc = this;
 
+  // Get playlist JSON from server.
   svc.getPlaylist = function (playlistId, state) {
     var deferred = $q.defer();
 

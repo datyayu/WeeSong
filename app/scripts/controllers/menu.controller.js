@@ -1,7 +1,7 @@
 angular.module('weesong')
-.controller('menuCtrl', function ($scope) {
+.controller('menuCtrl', function ($scope, $location) {
 /* Menu state variables */
-  $scope.activeItem = 'home';
+  $scope.activeItem = $location.path().split(/[/]/)[1] || 'home'; // Current tab
   $scope.menuItems = [
     {
       id: 'home',
@@ -28,9 +28,10 @@ angular.module('weesong')
 
 
 /* Event Listeners */
-  $scope.$on('tabChange', function (_, tab) {
+  $scope.$on('changeTab', function (_, tab) {
     changeTab(tab);
   });
+
 
 /* Scope functions */
   // Handle click on menu.
@@ -40,8 +41,9 @@ angular.module('weesong')
 
 
 /* Utility functions */
+  // Change current tab and tell mainCtrl to change route.
   function changeTab (tab) {
-    activeItem = tab.id;
+    $scope.activeItem = tab.id;
     $scope.$emit('pageChange', tab);
   }
 

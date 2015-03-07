@@ -1,6 +1,7 @@
 /* Main Ctrl */
 angular.module('weesong')
 .controller('MainCtrl', function ($scope, $location, PlayerSvc) {
+/* Controller variables */
   $scope.pageTitle = "Weesong";
   $scope.route = $location.path();
   $scope.showMenu = false;
@@ -23,16 +24,23 @@ angular.module('weesong')
     }
   });
 
-  // Show/ Hide side menu.
+  // Rebroadcast back to menu.
+  $scope.$on('tabChange', function (_, tab) {
+    $scope.$broadcast('changeTab', tab);
+  })
+
+  // Show/ Hide mobile menu.
   $scope.$on('toggleMenu', function () {
     $scope.showMenu = !$scope.showMenu;
   });
 
+  // Show / hide playlist on player.
   $scope.$on('togglePlaylist', function () {
     $scope.showPlaylist = !$scope.showPlaylist;
   });
 
 /* Scope functions */
+  // Hide mobile menu.
   $scope.hideMenu = function (e) {
     e.stopPropagation();
 

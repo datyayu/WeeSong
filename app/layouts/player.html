@@ -33,17 +33,21 @@
   </div>
 <!-- Controls -->
   <div class="Player__controls">
-    <span class="Player__controls__icon icon-loop"
+    <span class="Player__controls__icon 
+                 icon-loop"
           ng-class="{'Active': playerLooped}" 
           ng-click="toggleLoop()"></span>
-    <span class="Player__controls__icon icon-backward" 
+    <span class="Player__controls__icon 
+                 icon-backward" 
           ng-click="playPrev()"></span>
     <span class="Player__controls__icon" 
           ng-class="isPlaying ? 'icon-pause' : 'icon-play'"
           ng-click="play()"></span>
-    <span class="Player__controls__icon icon-forward" 
+    <span class="Player__controls__icon 
+                 icon-forward" 
           ng-click="playNext()"></span>
-    <span class="Player__controls__icon icon-shuffle" 
+    <span class="Player__controls__icon
+                 icon-shuffle" 
           ng-class="{'Active': playerShuffled}" 
           ng-click="toggleShuffle()" ></span>
   </div><!-- /.Player__controls-->
@@ -55,7 +59,9 @@
          ng-controller="PlaylistBarCtrl">
   <!-- Bar title -->
   <div class="Playlist-bar__mobile__bar">
-    <span class="Playlist-bar__mobile__title"> Current Playlist </span>
+    <span class="Playlist-bar__mobile__title"> 
+      Current Playlist
+    </span>
   </div>
   <!-- Playlist -->
   <ul class="Playlist-bar__list">

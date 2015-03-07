@@ -1,8 +1,22 @@
 /* Mobile-first view */
-  .Playlist
+  .Playlist-container
     background rgba(black, .7)
     width 100%
     height 100%
+  
+  .Playlist__info,
+  .Playlist__bar
+    display none
+  
+  .Playlist__info__cover
+    width 300px
+    heigh 300px
+    margin 0 auto
+    
+  .Playlist__info__image
+    width 100%
+    height 100%
+
   .Playlist__item
     background rgba(black, .5)
     display flex
@@ -31,13 +45,13 @@
 
   .Playlist__item__text
     color rgba(white, .8)
-    font-size 1em
+    font-size 1.3em
     text-overflow ellipsis
     overflow hidden
     white-space nowrap
-    &--artist, &--album
+    &--artist
       color rgba(white, .5)
-      font-size .8em
+      font-size 1.1em
 
 
 
@@ -50,4 +64,67 @@
       padding-top 1em
 
     .Playlist__item__text
-      font-size 1.6em
+      font-size 2em
+
+
+/* Desktop View*/
+  @media screen and (min-width: $query_large)
+    .Playlist__container
+      background none
+      display flex
+      margin 1em 5%
+      width 60%
+      padding-right 5%
+      flex-direction column
+    
+    .Playlist__info
+      display block
+      border-right 1px solid $secondary_color
+      width 43%
+      margin 1em 0
+      
+    .Playlist__info__text
+      text-align center
+      color $light_text
+      padding .1em
+      font-size 1.3em
+      &--title
+        color $dark_text
+        font-size 2em
+      &--date
+        padding-top 1em
+        font-size 1em
+    
+    .Playlist__list
+      background none
+      max-height 60vh
+      overflow-y auto
+      width 100%
+      
+    .Playlist__item
+      border-bottom 1px solid $secondary_color
+      background none
+      justify-content center
+      height 4em
+      overflow hidden
+      text-align center
+      &:nth-child(odd)
+        background none
+        
+    .Playlist__bar
+      display block
+      height 2em
+      text-align center
+      color white
+      background $primary_color
+      font-size 2em
+      padding-top .2em
+
+    .Playlist__item__text
+      color $dark_text
+      font-size 1em
+    .Playlist__item__info
+      padding-top .5em
+    
+    .Playlist__item__cover
+      display none

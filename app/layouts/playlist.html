@@ -1,18 +1,46 @@
-<section class="Page Playlist">
+<section class="Playlist__info">
+  <figure class="Playlist__info__cover">
+    <img class="Playlist__info__image"
+         ng-src="{{ playlist.info.coverImage }}">
+  </figure>
+  <p class="Playlist__info__text
+            Playlist__info__text--title">
+    {{ playlist.info.title }}
+  </p>
+  <p class="Playlist__info__text
+            Playlist__info__text--author">
+    by {{ playlist.info.author }}
+  </p>
+  <p class="Playlist__info__text
+            Playlist__info__text--songs ">
+    {{ playlist.info.songNumber }} songs
+  </p>
+  <p class="Playlist__info__text
+            Playlist__info__text--date">
+    Last updated on {{ playlist.info.date}}
+  </p>
+</section>
+
+<section class="Playlist__container">
+  <div class="Playlist__bar">
+    Songs
+  </div>
   <ul class="Playlist__list">
-    <li class="Playlist__item" ng-repeat="song in playlist.songs" ng-click="play($index)">
+    <li class="Playlist__item" 
+        ng-repeat="song in playlist.songs"
+        ng-click="play($index)">
       <figure class="Playlist__item__cover">
-        <img class="Playlist__item__image" ng-src="{{ song.coverImage }}">
+        <img class="Playlist__item__image" 
+             ng-src="{{ song.coverImage }}">
       </figure>
       <div class="Playlist__item__info">
-        <p class="Playlist__item__text Playlist__item__text--title">
+        <p class="Playlist__item__text
+                  Playlist__item__text--title">
           {{ song.title }}
         </p>
-        <p class="Playlist__item__text Playlist__item__text--artist">
+        <p class="Playlist__item__text
+                  Playlist__item__text--artist">
           {{ song.artist }}
-        </p>
-        <p class="Playlist__item__text Playlist__item__text--album">
-          {{ song.album }}
         </p>
       </div>
     </li>

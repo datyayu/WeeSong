@@ -13,7 +13,7 @@ angular.module('weesong')
     PlayerSvc.setPlaylist($scope.playlist);
     PlayerSvc.playSongAt($index);
 
-    $scope.$emit('pageChange', {id: 'player', url: '/player'});
+    $scope.$emit('tabChange', {id: 'player', url: '/player'});
   };
 
 });
