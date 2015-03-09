@@ -1,17 +1,17 @@
 /* Mobile-first view */
   .Playlist-bar
     border-left 1px solid $tertiary_color
-    transition all 300ms ease-in-out
-    position fixed
-    top 0
-    right -50%
-    width 50%
     height 100%
+    position fixed
+    right -50%
+    top 0
+    transition all 300ms ease-in-out
+    width 50%
 
   .Playlist-bar__list
     background $tertiary_color
-    overflow-y auto
     height 100%
+    overflow-y auto
     width 100%
     &.Active
       top 6em
@@ -74,25 +74,25 @@
     .Playlist-bar__mobile__bar
       height 2em
       font-size 2em
-      padding-top .2em
+      padding-top .3em
       
 
 /* Desktop View*/
   @media screen and (min-width: $query_large)
     .Playlist-bar
-      margin 6em 5% 0 5%
+      border none
       display block
+      margin 6em 5% 0 5%
       position static
       width 60%
-      border none
     .Playlist-bar__list
-      max-height 50vh
       background none
+      max-height 50vh
     .Playlist-bar__mobile__bar
       background $primary_color
     .Playlist-bar__item
-      border-bottom 1px solid $secondary_color
       background none
+      border-bottom 1px solid $secondary_color
       justify-content center
       height 4em
       overflow hidden
