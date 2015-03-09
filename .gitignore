@@ -4,3 +4,6 @@ npm-debug.log
 
 # Generated assets
 app/assets/
+
+#Windows stuff
+**/Thumbs.db
