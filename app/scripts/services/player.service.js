@@ -51,13 +51,13 @@ angular.module('weesong')
   svc.toggleRandom = function (state) {
     _playerIsRandom = !_playerIsRandom;
     svc.shufflePlaylist();
-  }
+  };
 
 
-/* Custom events on Player */
+/* Add custom events on Player */
   svc.onEvent = function (e, cb) {
     _player.addEventListener(e, cb, false);
-  } 
+  };
 
 
 /* Listeners */
@@ -106,7 +106,7 @@ angular.module('weesong')
       _currentSong = _playlist.songs[++_index];
       reloadAudio(_currentSong);
     }
-  }
+  };
 
 
   // Play prev song on the playlist
@@ -115,7 +115,7 @@ angular.module('weesong')
       _currentSong = _playlist.songs[--_index];
       reloadAudio(_currentSong);
     }
-  }
+  };
 
 
   // Play the song at 'index' position in current playlist.
@@ -124,7 +124,7 @@ angular.module('weesong')
     _currentSong = _playlist.songs[index];
 
     reloadAudio(_currentSong);
-  }
+  };
 
 
   // Shuffles / Unshuffles the playlist.
@@ -144,7 +144,7 @@ angular.module('weesong')
 
     // Broadcast a event to update playlist on controllers.
     $rootScope.$broadcast('playlistShuffled');
-  }
+  };
 
 
 
@@ -156,5 +156,5 @@ angular.module('weesong')
     _player.play(); 
     
     $rootScope.$broadcast('changeSong');
-  }
+  };
 });
