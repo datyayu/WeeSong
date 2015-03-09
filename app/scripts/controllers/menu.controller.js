@@ -22,7 +22,7 @@ angular.module('weesong')
     },{
       id: 'playlist',
       text: 'Playlists',
-      url: '/playlist'
+      url: '/playlists'
     }
   ];
 

@@ -1,9 +1,9 @@
 angular.module('weesong')
-.controller('PlaylistCtrl', function ($scope, PlaylistSvc, PlayerSvc) {
+.controller('PlaylistCtrl', function ($scope, PlaylistSvc, PlayerSvc, $routeParams) {
   $scope.playlist = {};
 
 // Get playlist's JSON from server.
-  PlaylistSvc.getPlaylist('/playlist.json').then(function (data) {
+  PlaylistSvc.getPlaylist('db/'+ $routeParams.playlistID + '.json').then(function (data) {
     $scope.playlist = data;
   });
 

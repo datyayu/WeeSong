@@ -6,8 +6,9 @@ angular.module('weesong', [
 angular.module('weesong')
 .config(function ($routeProvider, $locationProvider) {
   $routeProvider
-    .when('/playlist', {controller: 'PlaylistCtrl', templateUrl: 'layouts/playlist.html'})
     .when('/player',   {controller: 'PlayerCtrl',   templateUrl: 'layouts/player.html'  })
+    .when('/playlists', {templateUrl: 'layouts/playlists.html'})
+    .when('/playlists/:playlistID', {controller: 'PlaylistCtrl', templateUrl: 'layouts/playlist_individual.html'})
 
     /* Uncomment on prod */
     
