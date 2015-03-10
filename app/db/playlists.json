@@ -1,1 +1,21 @@
-playlists.json
+[
+  {
+    "coverImage": "assets/img/iguigu.jpg",
+    "title": "Iguchi Yuka First Single - Hafa Adai",
+    "author": "@datyayu",
+    "songNumber": 12,
+    "id": "iguigu"
+  },{
+    "coverImage": "assets/img/bladedance.jpg",
+    "title": "Seirei Tsukai no Blade Dance Special CD",
+    "author": "@datyayu",
+    "songNumber": 3,
+    "id": "bladedance"
+  },{
+    "coverImage": "assets/img/gochiusa.jpg",
+    "title": "Gochiusa songs",
+    "author": "@datyayu",
+    "songNumber": 6,
+    "id": "gochiusa"
+  }
+]
