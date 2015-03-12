@@ -12,7 +12,7 @@ angular.module('weesong')
       templateUrl: 'layouts/player.html'
     })
     .when('/playlists', {
-      templateUrl: 'PlaylistListCtrl',
+      controller: 'PlaylistsListCtrl',
       templateUrl: 'layouts/playlists_list.html'
     })
     .when('/playlists/:playlistID', {

@@ -1,17 +1,13 @@
-<ul>
-  <li>
-    <a href="#/playlists/gochiusa">
-      Daydream Cafe
-    </a>
-  </li>
-  <li>
-    <a href="#/playlists/iguigu">
-      Iguchi Yuka First Album
-    </a>
-  </li>
-  <li>
-    <a href="#/playlists/bladedance">
-      Seirei Tsukai no Blade Dance Special CD
-    </a>
+<ul class="Playlists-list__list">
+  <li ng-repeat="playlist in playlists"
+      class="Playlists-list__item"
+      ng-click="openPlaylist(playlist.id)">
+    <figure class="Playlists-list__item__cover">
+      <img class="Playlists-list__item__cover__image"
+           ng-src="{{playlist.coverImage }}">
+    </figure>
+    <p class="Playlists-list__item__title">
+      {{ playlist.title }}
+    </p>
   </li>
 </ul>
