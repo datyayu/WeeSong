@@ -1,0 +1,12 @@
+<ul class="Series-list__list">
+  <li ng-repeat="series in seriesList"
+      class="Series-list__item">
+    <figure class="Series-list__item__cover">
+      <img class="Series-list__item__cover__image"
+           ng-src="{{ series.coverImg }}">
+      <figcaption class="Series-list__item__title">
+        {{ series.title }}
+      </figcaption>
+    </figure>
+  </li>
+</ul>

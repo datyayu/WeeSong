@@ -8,13 +8,13 @@ angular.module('weesong', [
 angular.module('weesong')
 .config(function ($routeProvider) {
   $routeProvider
-    // Player route.
+  // Player route.
     .when('/player', {
       controller: 'PlayerCtrl',
       templateUrl: 'layouts/player.html'
     })
 
-    // Playlist-related routes.
+  // Playlist-related routes.
     .when('/playlists', {
       controller: 'PlaylistsListCtrl',
       templateUrl: 'layouts/playlists_list.html'
@@ -24,23 +24,23 @@ angular.module('weesong')
       templateUrl: 'layouts/playlist.html'
     })
 
-    // Series-related routes.
+  // Series-related routes.
     .when('/series', {
       controller: 'SeriesListCtrl',
-      templateUrl: 'layout/series_list.html'
+      templateUrl: 'layouts/series_list.html'
     })
     .when('/series/:seriesID', {
       controller: 'SeriesCtrl',
-      templateUrl: 'layout/series.html'
+      templateUrl: 'layouts/series.html'
     })
 
-    // Seasons-related routes
+  // Seasons-related routes
     .when('/seasons', {
       controller: 'SeasonsListCtrl',
-      templateUrl: 'layout/seasons_list.html'
+      templateUrl: 'layouts/seasons_list.html'
     })
     .when('/seasons/:seasonID', {
       controller: 'SeasonCtrl',
-      templateUrl: 'layout/season.html'
+      templateUrl: 'layouts/season.html'
     })
 });
