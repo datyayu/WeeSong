@@ -1,50 +1,40 @@
 angular.module('weesong')
 .controller('menuCtrl', function ($scope, $location) {
 /* Menu state variables */
-  $scope.activeItem = $location.path().split(/[/]/)[1] || 'home'; // Current tab
   $scope.menuItems = [
     {
-      id: 'home',
-      text: 'Wee',
+      id: '',
+      title: 'Wee',
       url: '/'
     },{
       id: 'player',
-      text: 'Now Playing',
+      title: 'Now Playing',
       url: '/player'
     },{
-      id: 'top',
-      text: 'Top Hits',
-      url: '/top'
+      id: 'series',
+      title: 'Series',
+      url: '/series'
     },{
-      id: 'artist',
-      text: 'Artists',
-      url: '/artists'
+      id: 'seasons',
+      title: 'Seasons',
+      url: '/seasons'
     },{
-      id: 'playlist',
-      text: 'Playlists',
+      id: 'playlists',
+      title: 'Playlists',
       url: '/playlists'
     }
   ];
 
-
 /* Event Listeners */
-  $scope.$on('changeTab', function (_, tab) {
-    changeTab(tab);
+  // Change the active menu item.
+  $scope.$on('menuChangeUrl', function (_, url) {
+    $scope.activeItem = url.split('/')[1];
   });
 
 
 /* Scope functions */
   // Handle click on menu.
-  $scope.selectOption = function (item) {
-    changeTab(item);
+  $scope.selectOption = function (url) {
+    $scope.$emit('changeUrl', url); 
   };
-
-
-/* Utility functions */
-  // Change current tab and tell mainCtrl to change route.
-  function changeTab (tab) {
-    $scope.activeItem = tab.id;
-    $scope.$emit('pageChange', tab);
-  }
-
 });

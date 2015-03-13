@@ -1,7 +1,7 @@
 <ul class="Playlists-list__list">
   <li ng-repeat="playlist in playlists"
       class="Playlists-list__item"
-      ng-click="openPlaylist(playlist.id)">
+      ng-click="openPlaylist(playlist)">
     <figure class="Playlists-list__item__cover">
       <img class="Playlists-list__item__cover__image"
            ng-src="{{playlist.coverImage }}">

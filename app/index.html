@@ -9,7 +9,7 @@
 	<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700">
 	<link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body ng-controller="MainCtrl">
+<body ng-controller="MainCtrl" ng-init="init()">
 <!-- Audio metadata -->
 <audio id="player"></audio>
 
@@ -19,7 +19,7 @@
 
 <!-- Header ====================================-->
 	<header class="Header" 
-					ng-controller="HeaderCtrl">
+					ng-controller="HeaderCtrl as header">
 	<!-- Logo / Title ==========================-->
 		<h1 class="Header__site-title">
 			Wee<span class="Header__site-title--mod">song</span>
@@ -33,7 +33,7 @@
 		</div>
 	<!-- Page title on mobile ==================-->
 		<div class="Header__page-title">
-			{{ pageTitle }}
+			{{ this.title }}
 		</div>
 	<!-- User info =============================-->
 		<div class="Header__user">
@@ -66,9 +66,9 @@
 			<li class="Menu__item"
 					ng-repeat="item in menuItems" 
 					ng-class="{'Active': item.id == activeItem}" 
-					ng-click="selectOption(item)">
+					ng-click="selectOption(item.url)">
 				<span class="Menu__link">
-					{{ item.text }}
+					{{ item.title }}
 				</span>
 			</li>
 		</ul>

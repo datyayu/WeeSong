@@ -1,6 +1,9 @@
 angular.module('weesong')
 .controller('PlayerCtrl', function ($scope, $location, PlayerSvc) {
 /* Variables*/
+  /* Change title on load */
+  $scope.$emit('changeTitle', 'Now Playing'); // Change header title.
+
   /* Player info variables */
   $scope.song        = PlayerSvc.getCurrentSong();
   $scope.elapsedTime = secondsToString(PlayerSvc.getCurrentTime());
