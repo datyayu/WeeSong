@@ -8,14 +8,12 @@
 .Series-list__index__item
   cursor pointer
   user-select none
-  display  inline
-  
 .Series-list__index__item__link
   color white
 .Series-list__index__item__link--dead
   color $secondary_color
 .Series-list__list
-  width 100%
+  width 100vw
   display flex
   flex-flow row wrap
 .Series-list__item
@@ -43,3 +41,32 @@
   overflow hidden
   text-align center
   width 100%
+
+@media screen and (min-width: $query_medium)
+  .Series-list__item
+    width 33.33vw
+    height 49.9vw
+  .Series-list__index
+    height 2em
+  .Series-list__index__item
+    font-size 1.4em
+    
+@media screen and (min-width: $query_large)
+  .Series-list
+    margin-top 1em
+    width 100%
+  .Series-list__index
+    background none
+    width 80%
+    margin 0 auto
+  .Series-list__list
+    width 100%
+    justify-content flex-start
+  .Series-list__index__item
+    font-size 1em
+  .Series-list__item
+    width 16vw
+    margin .5vw 1vw
+    height 24vw
+  .Series-list__index__item__link
+    color $primary_color

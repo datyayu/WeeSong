@@ -11,7 +11,8 @@ angular.module('weesong')
   // Player route.
     .when('/player', {
       controller: 'PlayerCtrl',
-      templateUrl: 'layouts/player.html'
+      templateUrl: 'layouts/player.html',
+      title: 'Now Playing'
     })
 
   // Playlist-related routes.
