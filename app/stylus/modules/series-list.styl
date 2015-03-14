@@ -1,15 +1,14 @@
 .Series-list__list
   display flex
-  width 100%
   margin 0
-  flex-wrap wrap
-  justify-content space-between
+  flex-direction column
+  width 100%
 .Series-list__item
   cursor pointer
+  height 3em
+  margin .5em
   user-select none
-  width 33%
-  margin 0
-  padding 0
+  width 100%
 .Series-list__item__cover
   margin 0
   height 100%
@@ -23,11 +22,11 @@
   bottom 0em 
   color rgba(white, .9)
   display flex
-  height 3em
-  width 100%
+  flex-direction column
   justify-content center
-  margin-bottom .25em
+  height 3em
   position absolute
   text-overflow ellipsis
   overflow hidden
   text-align center
+  width 100%
