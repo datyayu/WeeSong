@@ -29,9 +29,17 @@ angular.module('weesong')
       controller: 'SeriesListCtrl',
       templateUrl: 'layouts/series_list.html'
     })
-    .when('/series/:seriesID', {
+    .when('/series/title/:seriesID', {
       controller: 'SeriesCtrl',
       templateUrl: 'layouts/series.html'
+    })
+  // Series Search
+    .when('/series/index', {
+      controller: 'SeriesListCtrl',
+      templateUrl: 'layouts/series_list.html'
+    }).when('/series/index/:letter', {
+      controller: 'SeriesListCtrl',
+      templateUrl: 'layouts/series_list.html'
     })
 
   // Seasons-related routes

@@ -1,18 +1,49 @@
-[
-  {
-    "title": "Absolute Duo",
-    "coverImg": "assets/img/series/absoluteduo.jpg"
-  },
-  {
-    "title": "Absolute Duo",
-    "coverImg": "assets/img/series/absoluteduo.jpg"
-  },
-  {
-    "title": "Rokujouma no Shinryakusha!？ ",
-    "coverImg": "assets/img/series/absoluteduo.jpg"
-  },
-  {
-    "title": "Seirei Tsukai no Blade Dance",
-    "coverImg": "assets/img/series/absoluteduo.jpg"
-  }
-]
+{
+  "index": [
+      { "character" : "#", "hasResults": false },
+      { "character" : "A", "hasResults": true },
+      { "character" : "B", "hasResults": false },
+      { "character" : "C", "hasResults": false },
+      { "character" : "D", "hasResults": false },
+      { "character" : "E", "hasResults": false },
+      { "character" : "F", "hasResults": false },
+      { "character" : "G", "hasResults": false },
+      { "character" : "H", "hasResults": false },
+      { "character" : "I", "hasResults": false },
+      { "character" : "J", "hasResults": true },
+      { "character" : "K", "hasResults": false },
+      { "character" : "L", "hasResults": false },
+      { "character" : "M", "hasResults": false },
+      { "character" : "N", "hasResults": false },
+      { "character" : "O", "hasResults": false },
+      { "character" : "P", "hasResults": false },
+      { "character" : "Q", "hasResults": false },
+      { "character" : "R", "hasResults": false },
+      { "character" : "S", "hasResults": true },
+      { "character" : "T", "hasResults": false },
+      { "character" : "U", "hasResults": false },
+      { "character" : "V", "hasResults": false },
+      { "character" : "W", "hasResults": false },
+      { "character" : "X", "hasResults": false },
+      { "character" : "Y", "hasResults": false },
+      { "character" : "Z", "hasResults": false }
+  ],
+  "series" : [
+    {
+      "title": "Absolute Duo",
+      "coverImg": "assets/img/series/absoluteduo.jpg"
+    },
+    {
+      "title": "Saenai Heroine no Sodatekata",
+      "coverImg": "assets/img/series/saekano.jpg"
+    },
+    {
+      "title": "Juuou Mujin no Fafnir",
+      "coverImg": "assets/img/series/fafnir.jpg"
+    },
+    {
+      "title": "Shinmai Maou no Testament",
+      "coverImg": "assets/img/series/shinmaou.jpg"
+    }
+  ]
+}

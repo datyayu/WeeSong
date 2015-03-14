@@ -1,5 +1,25 @@
+<ul class="Series-list__index"> 
+  <li class="Series-list__index__item">
+    <a class="Series-list__index__item__link"
+       href="#/series/index/">
+      ALL
+    </a>
+  </li>
+  <li ng-repeat=" item in seriesList.index"
+      class="Series-list__index__item">
+    <a class="Series-list__index__item__link"
+       ng-if="item.hasResults"
+       ng-href="#/series/index/{{ item.character.toLowerCase() }}">
+      {{ item.character }}
+    </a>
+    <span ng-if="!item.hasResults"
+          class="Series-list__index__item__link--dead"> 
+      {{ item.character }}
+    </span>
+  </li>
+</ul>
 <ul class="Series-list__list">
-  <li ng-repeat="series in seriesList"
+  <li ng-repeat="series in seriesList.series | filter: { title: letter }: byFirstLetter | orderBy: 'title'"
       class="Series-list__item">
     <figure class="Series-list__item__cover">
       <img class="Series-list__item__cover__image"
