@@ -1,0 +1,19 @@
+<div class="Series-list">
+  <p class="Season__title"
+        ng-bind="season.title">
+  </p>
+  <ul class="Series-list__list">
+    <li ng-repeat="series in season.series | orderBy: 'title'"
+        class="Series-list__item"
+        ng-click="openSeries(series.id)">
+      <figure class="Series-list__item__cover">
+        <img class="Series-list__item__cover__image"
+             draggable="false"
+             ng-src="{{ series.coverImg }}">
+        <figcaption class="Series-list__item__title"
+                    ng-bind="series.title">
+        </figcaption>
+      </figure>
+    </li>
+  </ul>
+</div>

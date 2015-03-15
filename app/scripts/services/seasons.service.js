@@ -1,12 +1,12 @@
 angular.module('weesong')
-.service('SeriesSvc', function ($http, $q) {
+.service('SeasonsSvc', function ($http, $q) {
   var svc = this;
 
-  // Get series list JSON from server.
-  svc.getSeriesList = function () {
+  // Get seasons list JSON from server.
+  svc.getSeasonsList = function () {
     var deferred = $q.defer();
 
-    $http.get('db/series.json')
+    $http.get('db/seasons.json')
       .success(function (seriesList) {
         deferred.resolve(seriesList);
       })
@@ -17,13 +17,13 @@ angular.module('weesong')
     return deferred.promise;
   };
 
-  // Get series' info JSON from server.
-  svc.getSeries= function (seriesID) {
+  // Get season series JSON from server.
+  svc.getSeason= function (seasonID) {
     var deferred = $q.defer();
 
-    $http.get('db/series/' + seriesID + '.json')
-      .success(function (albums) {
-        deferred.resolve(albums);
+    $http.get('db/seasons/' + seasonID + '.json')
+      .success(function (seriesList) {
+        deferred.resolve(seriesList);
       })
       .error(function (err) {
         deferred.reject(err);
@@ -31,5 +31,5 @@ angular.module('weesong')
 
     return deferred.promise;
   };
-  
+
 });

@@ -1,0 +1,25 @@
+{
+  "title": "Winter 2015",
+  "series": [
+    {
+      "title": "Absolute Duo",
+      "coverImg": "assets/img/series/absoluteduo.jpg",
+      "id": "absoluteduo"
+    },
+    {
+      "title": "Saenai Heroine no Sodatekata",
+      "coverImg": "assets/img/series/saekano.jpg",
+      "id": "saekano"
+    },
+    {
+      "title": "Juuou Mujin no Fafnir",
+      "coverImg": "assets/img/series/fafnir.jpg",
+      "id": "fafnir"
+    },
+    {
+      "title": "Shinmai Maou no Testament",
+      "coverImg": "assets/img/series/shinmaou.jpg",
+      "id": "shinmaou"
+    }
+  ]
+}

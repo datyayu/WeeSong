@@ -1,0 +1,27 @@
+.Seasons__list
+  display flex
+  margin 1em
+  flex-flow column nowrap
+  justify-content center
+  
+.Seasons__item
+  background $tertiary_color
+  display flex
+  flex-direction column
+  height 5em
+  justify-content center
+  margin-bottom 1em
+  text-align center
+  
+.Seasons__text
+  font-size 2em
+  color white
+  
+@media screen and (min-width: $query_medium)
+  .Seasons__list
+    width 100%
+    flex-flow row wrap
+    justify-content flex-start
+  .Seasons__item
+    margin 1em 2.5%
+    width 45%

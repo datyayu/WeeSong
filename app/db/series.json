@@ -9,7 +9,7 @@
       { "character" : "F", "hasResults": false },
       { "character" : "G", "hasResults": false },
       { "character" : "H", "hasResults": false },
-      { "character" : "I", "hasResults": false },
+      { "character" : "I", "hasResults": true },
       { "character" : "J", "hasResults": true },
       { "character" : "K", "hasResults": false },
       { "character" : "L", "hasResults": false },
@@ -18,14 +18,14 @@
       { "character" : "O", "hasResults": false },
       { "character" : "P", "hasResults": false },
       { "character" : "Q", "hasResults": false },
-      { "character" : "R", "hasResults": false },
+      { "character" : "R", "hasResults": true },
       { "character" : "S", "hasResults": true },
       { "character" : "T", "hasResults": false },
       { "character" : "U", "hasResults": false },
       { "character" : "V", "hasResults": false },
       { "character" : "W", "hasResults": false },
       { "character" : "X", "hasResults": false },
-      { "character" : "Y", "hasResults": false },
+      { "character" : "Y", "hasResults": true },
       { "character" : "Z", "hasResults": false }
   ],
   "series" : [
@@ -48,6 +48,18 @@
       "title": "Shinmai Maou no Testament",
       "coverImg": "assets/img/series/shinmaou.jpg",
       "id": "shinmaou"
+    }, {
+      "title": "Rokujouma no Shinryakusha!?",
+      "coverImg": "assets/img/series/rokujouma.jpg",
+      "id": "rokujouma"
+    },{
+      "title": "Yuuki Yuuna wa Yuusha de Aru",
+      "coverImg": "assets/img/series/yuyuyu.jpg",
+      "id": "yuyuyu"
+    },{
+      "title": "Inou-Battle wa Nichijou-kei no Naka de",
+      "coverImg": "assets/img/series/inoubattle.jpg",
+      "id": "inoubattle"
     }
   ]
 }

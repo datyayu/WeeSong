@@ -1,0 +1,37 @@
+{
+  "info": {
+    "coverImage": "assets/img/covers/yuyuyu_op.jpg",
+    "title": "Hoshi to Hana",
+    "series": "Yuuki Yuuna wa Yuusha de Aru",
+    "singleType": "OP",
+    "author": "Sanshuu Chuugaku Yuusha-bu",
+    "date": "JNovember 5th, 2014"
+  },
+  "songs": [
+    {
+      "coverImage": "assets/img/covers/yuyuyu_op.jpg",
+      "title": "Hoshi to Hana",
+      "artist": "Terai Haruka, Mimori Suzuko, Uchiyama Yumi, Kurosawa Tomoyo, Nagatsuma Juri",
+      "album": "Yuuki Yuuna wa Yuusha de Aru",
+      "url": "assets/mp3/Yuuki Yuuna wa Yuusha de Aru/OP/01 Hoshi to Hana.mp3"
+    },{
+      "coverImage": "assets/img/covers/yuyuyu_op.jpg",
+      "title": "Inori no Uta acoustic guitar ver.",
+      "artist": "Kurosawa Tomoyo",
+      "album": "Yuuki Yuuna wa Yuusha de Aru",
+      "url": "assets/mp3/Yuuki Yuuna wa Yuusha de Aru/OP/02 Inori no Uta acoustic guitar ver..mp3"
+    },{
+      "coverImage": "assets/img/covers/yuyuyu_op.jpg",
+      "title": "Hoshi to Hana ＜Instrumental＞",
+      "artist": "Okabe Keiichi (MONACA)",
+      "album": "Yuuki Yuuna wa Yuusha de Aru",
+      "url": "assets/mp3/Yuuki Yuuna wa Yuusha de Aru/OP/03 Hoshi to Hana ＜Instrumental＞.mp3"
+    }, {
+      "coverImage": "assets/img/covers/yuyuyu_op.jpg",
+      "title": "Inori no Uta acoustic guitar ver. ＜Instrumental＞",
+      "artist": "shilo",
+      "album": "Yuuki Yuuna wa Yuusha de Aru",
+      "url": "assets/mp3/Yuuki Yuuna wa Yuusha de Aru/OP/04 Inori no Uta acoustic guitar ver. ＜Instrumental＞.mp3"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "info": {
+    "coverImage": "assets/img/covers/inoubattle_ed.jpg",
+    "title": "You Gotta Love Me!",
+    "series": "Inou-Battle wa Nichijou-kei no Naka de",
+    "singleType": "ED",
+    "author": "Kato*Fuku",
+    "date": "November 19th, 2014"
+  },
+  "songs": [
+    {
+      "coverImage": "assets/img/covers/inoubattle_ed.jpg",
+      "title": "You Gotta Love Me!",
+      "artist": "Kato*Fuku",
+      "album": "Inou-Battle wa Nichijou-kei no Naka de",
+      "url": "assets/mp3/Inou-Battle wa Nichijou-kei no Naka de/ED/01 You Gotta Love Me!.mp3"
+    },{
+      "coverImage": "assets/img/covers/inoubattle_ed.jpg",
+      "title": "Sadistic Love",
+      "artist": "Kato*Fuku",
+      "album": "Inou-Battle wa Nichijou-kei no Naka de",
+      "url": "assets/mp3/Inou-Battle wa Nichijou-kei no Naka de/ED/02 Sadistic Love.mp3"
+    },{
+      "coverImage": "assets/img/covers/inoubattle_ed.jpg",
+      "title": "You Gotta Love Me! (Instrumental)",
+      "artist": "Fujina Junpei (Elements Garden)",
+      "album": "Inou-Battle wa Nichijou-kei no Naka de",
+      "url": "assets/mp3/Inou-Battle wa Nichijou-kei no Naka de/ED/03 You Gotta Love Me! (Instrumental).mp3"
+    }, {
+      "coverImage": "assets/img/covers/inoubattle_ed.jpg",
+      "title": "Sadistic Love (Instrumental)",
+      "artist": "Iwahashi Seima (Elements Garden)",
+      "album": "Inou-Battle wa Nichijou-kei no Naka de",
+      "url": "assets/mp3/Inou-Battle wa Nichijou-kei no Naka de/ED/04 Sadistic Love (Instrumental).mp3"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "info": {
+    "coverImage": "assets/img/covers/rokujouma_op.jpg",
+    "title": "Koukan Win-Win Mujouken",
+    "series": "Rokujouma no Shinryakusha!?",
+    "singleType": "OP",
+    "author": "Heart♥Invader",
+    "date": "July 30th, 2014"
+  },
+  "songs": [
+    {
+      "coverImage": "assets/img/covers/rokujouma_op.jpg",
+      "title": "Koukan Win-Win Mujouken",
+      "artist": "Heart♥Invader",
+      "album": "Rokujouma no Shinryakusha!?",
+      "url": "assets/mp3/Rokujouma no Shinryakusha!/OP/01 Koukan Win-Win Mujouken.mp3"
+    }, {
+      "coverImage": "assets/img/covers/rokujouma_op.jpg",
+      "title": "Taisetsu List.",
+      "artist": "Heart♥Invader",
+      "album": "Rokujouma no Shinryakusha!",
+      "url": "assets/mp3/Rokujouma no Shinryakusha!/OP/02 Taisetsu List..mp3"
+    }, {
+      "coverImage": "assets/img/covers/rokujouma_op.jpg",
+      "title": "Koukan Win-Win Mujouken (Instrumental)",
+      "artist": "Mori Shintarou",
+      "album": "Rokujouma no Shinryakusha!?",
+      "url": "assets/mp3/Rokujouma no Shinryakusha!/OP/03 Koukan Win-Win Mujouken (Instrumental).mp3"
+    }, {
+      "coverImage": "assets/img/covers/rokujouma_op.jpg",
+      "title": "Taisetsu List. (Instrumental)",
+      "artist": "Fujisue Miki",
+      "album": "Rokujouma no Shinryakusha!?",
+      "url": "assets/mp3/Rokujouma no Shinryakusha!/OP/04 Taisetsu List. (Instrumental).mp3"
+    }
+  ]
+}

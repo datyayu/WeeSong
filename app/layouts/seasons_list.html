@@ -1,0 +1,12 @@
+<ul class="Seasons__list">
+  <li ng-repeat="season in seasons"
+      class="Seasons__item"
+      ng-click="openSeason(season.id)">
+    <figure class="Seasons__image-container">
+      <!-- <img class="Season__image" ng-src="{{ season.image }}"> -->
+      <figcaption class="Seasons__text"
+                  ng-bind="season.text">
+      </figcaption>
+    </figure>
+  </li>
+</ul>

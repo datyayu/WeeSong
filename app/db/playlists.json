@@ -6,33 +6,19 @@
     "author": "@datyayu", 
     "songsNumber": 12,
     "date": "march 2015"
-  },{
+  }, {
     "coverImage": "assets/img/bladedance.jpg",
     "title": "Seirei Tsukai no Blade Dance Special CD",
     "id": "bladedance",
     "author": "@datyayu", 
     "songsNumber": 3,
     "date": "march 2015"
-  },{
+  }, {
     "coverImage": "assets/img/gochiusa.jpg",
     "title": "Gochiusa songs",
     "id": "gochiusa",
     "author": "@datyayu", 
     "songsNumber": 5,
     "date": "february 2015"
-  },{
-    "coverImage": "assets/img/rokujouma.jpg",
-    "title": "Rokujouma no Shinryakusha!？ OP",
-    "id": "rokujouma-op",
-    "author": "@datyayu",
-    "songsNumber": 4,
-    "date": "March 2015"
-  },{
-    "coverImage": "assets/img/covers/absoluteduo_op.jpg",
-    "title": "Absolute Duo OP",
-    "id": "absoluteduo_op",
-    "author": "@datyayu",
-    "songsNumber": 6,
-    "date": "March 2015"
   }
 ]
