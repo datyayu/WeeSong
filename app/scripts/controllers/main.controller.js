@@ -3,6 +3,7 @@ angular.module('weesong')
 .controller('MainCtrl', function ($scope, $location, PlayerSvc) {
 /* Controller variables */
   $scope.route = $location.path();
+  $scope.title = 'Weesong';
   $scope.showMenu = false;
   $scope.showPlaylist = false;  
 
@@ -19,6 +20,7 @@ angular.module('weesong')
   // Change the header title.
   $scope.$on('changeTitle', function (_, title) {
     $scope.$broadcast('headerChangeTitle', title);
+    $scope.title = 'Weesong | ' + title;
   })
 
   // Show/ Hide mobile menu.

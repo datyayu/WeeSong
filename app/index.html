@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="weesong">
+<html lang="en" ng-app="weesong" ng-controller="MainCtrl">
 <head>
 <!-- Meta-stuff ================================-->
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<title> Weesong </title>
+	<title ng-bind="title"> Weesong </title>
 <!-- Styleshets =================================-->
 	<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700">
 	<link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body ng-controller="MainCtrl" ng-init="init()">
+<body>
 <!-- Audio metadata -->
 <audio id="player"></audio>
 
@@ -32,8 +32,8 @@
 			<span class="Header__button__line"></span>
 		</div>
 	<!-- Page title on mobile ==================-->
-		<div class="Header__page-title">
-			{{ this.title }}
+		<div class="Header__page-title" ng-bind="title">
+			Weesong
 		</div>
 	<!-- User info =============================-->
 		<div class="Header__user">
@@ -67,9 +67,7 @@
 					ng-repeat="item in menuItems" 
 					ng-class="{'Active': item.id == activeItem}" 
 					ng-click="selectOption(item.url)">
-				<span class="Menu__link">
-					{{ item.title }}
-				</span>
+				<span class="Menu__link" ng-bind="item.title"></span>
 			</li>
 		</ul>
 	</nav>

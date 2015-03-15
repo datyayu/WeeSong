@@ -5,20 +5,20 @@
          ng-src="{{ playlist.info.coverImage }}">
   </figure>
   <p class="Playlist__info__text
-            Playlist__info__text--title">
-    {{ playlist.info.title }}
+            Playlist__info__text--title"
+     ng-bind="playlist.info.title">
   </p>
   <p class="Playlist__info__text
-            Playlist__info__text--author">
-    {{ playlist.info.series }} {{ playlist.info.singleType }} 
+            Playlist__info__text--author"
+     ng-bind="playlist.info.series + ' ' + playlist.info.singleType"> 
   </p>
   <p class="Playlist__info__text
-            Playlist__info__text--songs ">
-    {{ playlist.songs.length }} songs
+            Playlist__info__text--songs"
+     ng-bind="playlist.songs.length + ' songs'">
   </p>
   <p class="Playlist__info__text
-            Playlist__info__text--date">
-    Released on {{ playlist.info.date}}
+            Playlist__info__text--date"
+     ng-bind="'Released on ' + playlist.info.date">
   </p>
 </section>
 
@@ -37,12 +37,12 @@
       </figure>
       <div class="Playlist__item__info">
         <p class="Playlist__item__text
-                  Playlist__item__text--title">
-          {{ song.title }}
+                  Playlist__item__text--title"
+           ng-bind="song.title">
         </p>
         <p class="Playlist__item__text
-                  Playlist__item__text--artist">
-          {{ song.artist }}
+                  Playlist__item__text--artist"
+           ng-bind="song.artist">
         </p>
       </div>
     </li>

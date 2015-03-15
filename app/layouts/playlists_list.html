@@ -7,8 +7,8 @@
            draggable="false"
            ng-src="{{playlist.coverImage }}">
     </figure>
-    <p class="Playlists-list__item__title">
-      {{ playlist.title }}
+    <p class="Playlists-list__item__title"
+       ng-bind="playlist.title">
     </p>
   </li>
 </ul>

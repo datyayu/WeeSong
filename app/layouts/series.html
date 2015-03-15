@@ -5,22 +5,22 @@
          ng-src="assets/img/series/{{ seriesID }}.jpg">
   </figure>
   <p class="Series__info__text
-            Series__info__text--title">
-    {{ series.info.title }}
+            Series__info__text--title"
+     ng-bind="series.info.title">
   </p>
   <p class="Series__info__text
-            Series__info__text--season">
-    {{ series.info.season }}
+            Series__info__text--season"
+     ng-bind="series.info.season">
   </p>
   <p class="Series__info__text
             Series__info__text--episodes"
-     ng-if="series.info.episodes !== null">
-    {{ series.info.episodes + ' episodes' || 'Airing'}}
+     ng-if="series.info.episodes !== null"
+     ng-bind="series.info.episodes + ' episodes'">
   </p>
   <p class="Series__info__text
             Series__info__text--episodes"
       ng-if="series.info.episodes === null">
-    {{ 'Airing'}}
+    Airing
   </p>
   <a class="Series__info__text
             Series__info__text--link"
@@ -38,8 +38,8 @@
            draggable="false"
            ng-src="{{ album.coverImage }}">
     </figure>
-    <p class="Playlists-list__item__title">
-      [{{ album.singleType }}] {{ album.title }}
+    <p class="Playlists-list__item__title"
+       ng-bind="'['+ album.singleType + '] ' + album.title">
     </p>
   </li>
 </ul>

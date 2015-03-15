@@ -8,16 +8,16 @@
 <!-- Info -->
   <div class="Player__info">
     <p class="Player__info__text 
-              Player__text--title">
-      {{ song.title }}
+              Player__text--title"
+       ng-bind="song.title">
     </p>
     <p class="Player__info__text 
-              Player__text--artist">
-      {{ song.artist }}
+              Player__text--artist"
+       ng-bind="song.artist">
     </p>
     <p class="Player__info__text 
-              Player__text--album">
-      {{ song.album }}
+              Player__text--album"
+       ng-bind="song.album">
     </p>
   </div> <!-- /.Player__info -->
 <!-- Progress bar -->
@@ -29,8 +29,8 @@
       <div class="Player__progress-bar__dot"></div>
     </div>
   </div>
-  <div class="Player__progress-time">
-    {{ elapsedTime }} / {{ totalTime }}
+  <div class="Player__progress-time"
+       ng-bind="elapsedTime + '/' + totalTime">
   </div>
 <!-- Controls -->
   <div class="Player__controls">
@@ -72,12 +72,12 @@
         ng-click="play($index)">
       <div class="Playlist-bar__item__info">
         <p class="Playlist-bar__item__text 
-                  Playlist-bar__item__text--title">
-          {{ song.title }}
+                  Playlist-bar__item__text--title"
+           ng-bind="song.title">
         </p>
         <p class="Playlist-bar__item__text 
-                  Playlist-bar__item__text--artist">
-          {{ song.artist }}
+                  Playlist-bar__item__text--artist"
+            ng-bind="song.artist">
         </p>
       </div>
     </li>
