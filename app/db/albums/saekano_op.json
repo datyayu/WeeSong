@@ -1,0 +1,37 @@
+{
+  "info": {
+    "coverImage": "assets/img/covers/saekano_op.jpg",
+    "title": "Kimi-iro Signal",
+    "series": "Saenai Heroine no Sodatedakata",
+    "singleType": "OP",
+    "author": "Haruna Luna",
+    "date": "January 28th, 2015"
+  },
+  "songs": [
+    {
+      "coverImage": "assets/img/covers/saekano_op.jpg",
+      "title": "Kimi-iro Signal",
+      "artist": "Sawai Miku",
+      "album": "Saenai Heroine no Sodatedakata",
+      "url": "assets/mp3/Saenai Heroine no Sodatedakata/OP/01 Kimi-iro Signal.mp3"
+    }, {
+      "coverImage": "assets/img/covers/saekano_op.jpg",
+      "title": "Tokimeki MY HEART",
+      "artist": "Sawai Miku",
+      "album": "Saenai Heroine no Sodatedakata",
+      "url": "assets/mp3/Saenai Heroine no Sodatedakata/OP/02 Tokimeki MY HEART.mp3"
+    }, {
+      "coverImage": "assets/img/covers/saekano_op.jpg",
+      "title": "Seishun Princess",
+      "artist": "Sawai Miku",
+      "album": "Saenai Heroine no Sodatedakata",
+      "url": "assets/mp3/Saenai Heroine no Sodatedakata/OP/03 Seishun Princess.mp3"
+    }, {
+      "coverImage": "assets/img/covers/saekano_op.jpg",
+      "title": "Kimi-iro Signal (Instrumental)",
+      "artist": "Sawai Miku",
+      "album": "Saenai Heroine no Sodatedakata",
+      "url": "assets/mp3/Saenai Heroine no Sodatedakata/OP/04 Kimi-iro Signal -Instrumental-.mp3"
+    }
+  ]
+}

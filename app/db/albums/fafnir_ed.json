@@ -1,0 +1,49 @@
+{
+  "info": {
+    "coverImage": "assets/img/covers/fafnir_ed.jpg",
+    "title": "Ray of bullet",
+    "series": "Juuou Mujin no Fafnir",
+    "singleType": "ED",
+    "author": "Hidaka Rina, Numakura Manami",
+    "date": "January 28th, 2015"
+  },
+  "songs": [
+    {
+      "coverImage": "assets/img/covers/fafnir_ed.jpg",
+      "title": "Ray of bullet",
+      "artist": "Hidaka Rina, Numakura Manami",
+      "album": "Juuou Mujin no Fafnir",
+      "url": "assets/mp3/Juuou Mujin no Fafnir/ED/01 Ray of bullet.mp3"
+    }, {
+      "coverImage": "assets/img/covers/fafnir_ed.jpg",
+      "title": "Ray of bullet (Iris ver.)",
+      "artist": "Hidaka Rina",
+      "album": "Juuou Mujin no Fafnir",
+      "url": "assets/mp3/Juuou Mujin no Fafnir/ED/02 Ray of bullet.mp3"
+    }, {
+      "coverImage": "assets/img/covers/fafnir_ed.jpg",
+      "title": "Ray of bullet (Iris ver.)",
+      "artist": "Hidaka Rina",
+      "album": "Juuou Mujin no Fafnir",
+      "url": "assets/mp3/Juuou Mujin no Fafnir/ED/03 Ray of bullet.mp3"
+    }, {
+      "coverImage": "assets/img/covers/fafnir_ed.jpg",
+      "title": "Ray of bullet (tiny ver.)",
+      "artist": "Hidaka Rina, Numakura Manami",
+      "album": "Juuou Mujin no Fafnir",
+      "url": "assets/mp3/Juuou Mujin no Fafnir/ED/04 Ray of bullet (tiny ver.).mp3"
+    }, {
+      "coverImage": "assets/img/covers/fafnir_ed.jpg",
+      "title": "Ray of bullet (karaoke)",
+      "artist": "Sonoda Tomoya",
+      "album": "Juuou Mujin no Fafnir",
+      "url": "assets/mp3/Juuou Mujin no Fafnir/ED/05 Ray of bullet (karaoke).mp3"
+    }, {
+      "coverImage": "assets/img/covers/fafnir_ed.jpg",
+      "title": "Ray of bullet (tiny ver.) (karaoke)",
+      "artist": "Sonoda Tomoya",
+      "album": "Juuou Mujin no Fafnir",
+      "url": "assets/mp3/Juuou Mujin no Fafnir/ED/06 Ray of bullet (tiny ver.) (karaoke).mp3"
+    }
+  ]
+}

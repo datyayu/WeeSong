@@ -10,7 +10,7 @@
   </p>
   <p class="Playlist__info__text
             Playlist__info__text--author">
-    by {{ playlist.info.author }}
+    {{ playlist.info.series }} {{ playlist.info.singleType }} 
   </p>
   <p class="Playlist__info__text
             Playlist__info__text--songs ">
@@ -18,7 +18,7 @@
   </p>
   <p class="Playlist__info__text
             Playlist__info__text--date">
-    Last updated on {{ playlist.info.date}}
+    Released on {{ playlist.info.date}}
   </p>
 </section>
 

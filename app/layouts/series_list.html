@@ -2,7 +2,7 @@
   <ul class="Series-list__index"> 
     <li class="Series-list__index__item">
       <a class="Series-list__index__item__link"
-         href="#/series/index/">
+         href="#/series/">
         ALL
       </a>
     </li>
@@ -10,7 +10,7 @@
         class="Series-list__index__item">
       <a class="Series-list__index__item__link"
          ng-if="item.hasResults"
-         ng-href="#/series/index/{{ item.character.toLowerCase() }}">
+         ng-href="#/series/filter/{{ item.character.toLowerCase() }}">
         {{ item.character }}
       </a>
       <span ng-if="!item.hasResults"
@@ -21,9 +21,11 @@
   </ul>
   <ul class="Series-list__list">
     <li ng-repeat="series in seriesList.series | filter: { title: letter }: byFirstLetter | orderBy: 'title'"
-        class="Series-list__item">
+        class="Series-list__item"
+        ng-click="openSeries(series.id)">
       <figure class="Series-list__item__cover">
         <img class="Series-list__item__cover__image"
+             draggable="false"
              ng-src="{{ series.coverImg }}">
         <figcaption class="Series-list__item__title">
           {{ series.title }}

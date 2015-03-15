@@ -1,8 +1,7 @@
 angular.module('weesong')
-.controller('SeriesListCtrl', function ($scope, $routeParams, SeriesSvc) {
+.controller('SeriesListCtrl', function ($scope, $routeParams, $location, SeriesSvc) {
     $scope.$emit('changeTitle', 'Series'); // Set header title.
     $scope.letter = $routeParams.letter || '';
-    console.log($scope.letter)
 
     SeriesSvc.getSeriesList().then(function (data) {
       $scope.seriesList = data;
@@ -12,5 +11,9 @@ angular.module('weesong')
       if(expected === '') { return true; }
 
       return actual[0].toLowerCase() === expected.toLowerCase();
+    };
+
+    $scope.openSeries = function (seriesID) {
+      $location.path('/series/title/' + seriesID);
     };
 })

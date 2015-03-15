@@ -26,6 +26,11 @@ angular.module('weesong')
     $scope.showMenu = !$scope.showMenu;
   });
 
+  $scope.$on('hideMenus', function () {
+    $scope.showMenu = false;
+    $scope.showPlaylist = false;
+  });
+
   // Show / hide playlist on player.
   $scope.$on('togglePlaylist', function () {
     $scope.showPlaylist = !$scope.showPlaylist;

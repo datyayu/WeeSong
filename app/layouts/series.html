@@ -1,0 +1,45 @@
+<section class="Series__info">
+  <figure class="Series__info__cover">
+    <img class="Series__info__image"
+         draggable="false"
+         ng-src="assets/img/series/{{ seriesID }}.jpg">
+  </figure>
+  <p class="Series__info__text
+            Series__info__text--title">
+    {{ series.info.title }}
+  </p>
+  <p class="Series__info__text
+            Series__info__text--season">
+    {{ series.info.season }}
+  </p>
+  <p class="Series__info__text
+            Series__info__text--episodes"
+     ng-if="series.info.episodes !== null">
+    {{ series.info.episodes + ' episodes' || 'Airing'}}
+  </p>
+  <p class="Series__info__text
+            Series__info__text--episodes"
+      ng-if="series.info.episodes === null">
+    {{ 'Airing'}}
+  </p>
+  <a class="Series__info__text
+            Series__info__text--link"
+      ng-href="{{ series.info.site }}">
+      Official Site
+  </a>
+</section>
+
+<ul class="Playlists-list__list">
+  <li ng-repeat="album in series.albums"
+      class="Playlists-list__item"
+      ng-click="openPlaylist(album.singleType)">
+    <figure class="Playlists-list__item__cover">
+      <img class="Playlists-list__item__cover__image"
+           draggable="false"
+           ng-src="{{ album.coverImage }}">
+    </figure>
+    <p class="Playlists-list__item__title">
+      [{{ album.singleType }}] {{ album.title }}
+    </p>
+  </li>
+</ul>

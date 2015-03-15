@@ -144,7 +144,7 @@ angular.module('weesong')
   function secondsToString (seconds) {
     if (seconds !== undefined && !isNaN(seconds)) {
       var mins = Math.floor(seconds / 60);
-      var secs = Math.ceil(seconds % 60);
+      var secs = Math.floor(seconds % 60);
       return( ("0" + mins.toString()).slice(-2) +  ":" +
             ("0" + secs.toString()).slice(-2)
           );

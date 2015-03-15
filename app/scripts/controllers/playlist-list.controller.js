@@ -5,7 +5,7 @@ angular.module('weesong')
 
   // Get playlists from server.
   PlaylistSvc
-    .getPlaylist('db/playlists.json')
+    .getPlaylistsList()
     .then(function (data) {
       $scope.playlists = data;
     });

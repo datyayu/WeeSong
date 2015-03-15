@@ -1,0 +1,19 @@
+{
+  "info": {
+    "title": "Juuou Mujin no Fafnir",
+    "season": "Winter 2015",
+    "episodes": null,
+    "site": "http://www.tbs.co.jp/anime/fafnir/"
+  },
+  "albums": [
+    {
+      "singleType": "OP",
+      "title": "Absolute Soul",
+      "coverImage": "assets/img/covers/fafnir_op.jpg"
+    }, {
+      "singleType": "ED",
+      "title": "Ray of bullet",
+      "coverImage": "assets/img/covers/fafnir_ed.jpg"
+    }
+  ]
+}

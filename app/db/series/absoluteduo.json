@@ -1,0 +1,19 @@
+{
+  "info": {
+    "title": "Absolute Duo",
+    "season": "Winter 2015",
+    "episodes": null,
+    "site": "http://absoluteduo.com/"
+  },
+  "albums": [
+    {
+      "singleType": "OP",
+      "title": "Absolute Soul",
+      "coverImage": "assets/img/covers/absoluteduo_op.jpg"
+    }, {
+      "singleType": "ED",
+      "title": "Believe×Believe / Apple Tea no Aji / 2/2",
+      "coverImage": "assets/img/covers/absoluteduo_ed.jpg"
+    }
+  ]
+}

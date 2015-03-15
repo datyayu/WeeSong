@@ -34,11 +34,16 @@ angular.module('weesong')
       controller: 'SeriesCtrl',
       templateUrl: 'layouts/series.html'
     })
+    .when('/series/title/:seriesID/:singleType', {
+      controller: 'PlaylistCtrl',
+      templateUrl: 'layouts/series_single.html'
+    })
+    
   // Series Search
-    .when('/series/index', {
+    .when('/series/filter', {
       controller: 'SeriesListCtrl',
       templateUrl: 'layouts/series_list.html'
-    }).when('/series/index/:letter', {
+    }).when('/series/filter/:letter', {
       controller: 'SeriesListCtrl',
       templateUrl: 'layouts/series_list.html'
     })

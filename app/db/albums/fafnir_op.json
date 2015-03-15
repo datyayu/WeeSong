@@ -1,0 +1,43 @@
+{
+  "info": {
+    "coverImage": "assets/img/covers/fafnir_op.jpg",
+    "title": "FLYING FAFNIR",
+    "series": "Juuou Mujin no Fafnir",
+    "singleType": "OP",
+    "author": "TRUSTRICK",
+    "date": "January 14th, 2015"
+  },
+  "songs": [
+    {
+      "coverImage": "assets/img/covers/fafnir_op.jpg",
+      "title": "FLYING FAFNIR",
+      "artist": "TRUSTRICK",
+      "album": "Juuou Mujin no Fafnir",
+      "url": "assets/mp3/Juuou Mujin no Fafnir/OP/01 FLYING FAFNIR.mp3"
+    }, {
+      "coverImage": "assets/img/covers/fafnir_op.jpg",
+      "title": "ATLAS (English Version)",
+      "artist": "TRUSTRICK",
+      "album": "Juuou Mujin no Fafnir",
+      "url": "assets/mp3/Juuou Mujin no Fafnir/OP/02 ATLAS (English Version).mp3"
+    }, {
+      "coverImage": "assets/img/covers/fafnir_op.jpg",
+      "title": "FLYING FAFNIR (Instrumental)",
+      "artist": "Kanda Sayaka",
+      "album": "Juuou Mujin no Fafnir",
+      "url": "assets/mp3/Juuou Mujin no Fafnir/OP/03 FLYING FAFNIR (Instrumental).mp3"
+    }, {
+      "coverImage": "assets/img/covers/fafnir_op.jpg",
+      "title": "ATLAS (Instrumental)",
+      "artist": "Billy",
+      "album": "Juuou Mujin no Fafnir",
+      "url": "assets/mp3/Juuou Mujin no Fafnir/OP/04 ATLAS (Instrumental).mp3"
+    }, {
+      "coverImage": "assets/img/covers/fafnir_op.jpg",
+      "title": "FLYING FAFNIR (Anime OP Version)",
+      "artist": "TRUSTRICK",
+      "album": "Juuou Mujin no Fafnir",
+      "url": "assets/mp3/Juuou Mujin no Fafnir/OP/05 FLYING FAFNIR (Anime OP Version).mp3"
+    }
+  ]
+}
