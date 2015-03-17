@@ -105,9 +105,16 @@
         background rgba($secondary_color, .3) 
         .Playlist-bar__item__text--title:before
           content "\25ba"
+    .Playlist-bar__item--nolink
+        border-bottom none
+        cursor auto
+        &:hover
+          background none
+    
     .Playlist-bar__item__text
       color $dark_text
       font-size 1em
+      
     .Playlist-bar__item__info
       padding-top 0
 
