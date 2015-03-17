@@ -5,32 +5,30 @@ var gulp    = require('gulp'),
 
 
 // Compile stylus to css
-gulp.task('[dev]::css', function () {
+gulp.task('css', function () {
 	gulp.src('./app/stylus/styles.styl')
 		.pipe(stylus({
 			use: nib(),
 			compress: true
 		}))
-		.pipe(gulp.dest('./app/assets/css/'))
+		.pipe(gulp.dest('./app/public/assets/css/'))
 		.pipe(connect.reload())
 })
 
 
 // Reload on html changes.
 gulp.task('html', function () {
-	gulp.src(['./app/*.html', './app/layouts/**/*.html'])
+	gulp.src('./app/layouts/**/*.html')
+		.pipe(gulp.dest('./app/public/assets/html/'))
 		.pipe(connect.reload())
 })
 
 
 // Watch for changes.
-gulp.task('[dev]::watch:styles', ['[dev]::css'], function () {
+gulp.task('styles', ['css'], function () {
 	/* Stylus changes */
-	gulp.watch('./app/stylus/**/*.styl', ['[dev]::css'])
+	gulp.watch('./app/stylus/**/*.styl', ['css'])
 
 	/* Html changes */
-	gulp.watch([
-		'./app/layouts/**/*.html',
-		'./app/*.html'
-	], ['html'])
+	gulp.watch('./app/layouts/**/*.html', ['html'])
 })

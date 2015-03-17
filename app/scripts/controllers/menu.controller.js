@@ -26,14 +26,10 @@ angular.module('weesong')
   ];
 
 /* Event Listeners */
-  // Change the active menu item.
-  $scope.$on('menuChangeUrl', function (_, url) {
-    $scope.activeItem = url.split('/')[1];
-  });
-
   // Close the menu if it was open when the view changed.
   $scope.$on('$routeChangeStart', function () {
     $scope.$emit('hideMenus');
+    $scope.activeItem = $location.path().split('/')[1];
   });
 
 

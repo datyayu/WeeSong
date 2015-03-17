@@ -4,16 +4,16 @@ var gulp       = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     ngAnnotate = require('gulp-ng-annotate');
 
-gulp.task('[dev]::scripts', function () {
+gulp.task('js', function () {
   gulp.src(['app/scripts/**/*.js'])
     // .pipe(sourcemaps.init())
     .pipe(concat('app.js'))
     .pipe(ngAnnotate())
     // .pipe(uglify())
     // .pipe(sourcemaps.write())
-    .pipe(gulp.dest('app/assets/scripts'));
+    .pipe(gulp.dest('app/public/assets/scripts'));
 });
 
-gulp.task('[dev]::watch:scripts', ['[dev]::scripts'], function () {
-    gulp.watch('app/scripts/**/*.js', ['[dev]::scripts'])
+gulp.task('scripts', ['js'], function () {
+    gulp.watch('app/scripts/**/*.js', ['js'])
 });

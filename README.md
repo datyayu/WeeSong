@@ -20,12 +20,18 @@ Install with:
   * [x] Navigation.
   * [x] In-player playlist.
   * [x] Site-global playing.
-  * [ ] Featured songs/artist. <--- CURRENTLY HERE
-  * [ ] Search.
+  * [X] Featured songs/artist. 
+  * [X] Search in-app.
+  * [ ] Search via API. (Needs backend support first)
   * [ ] Users.
   * [ ] Interface for adding. 
   
-* **Backend** *(Currently using gulp instead)*
+* **Backend**
+  * [X] Static server.
+  * [ ] Proper models for songs. <-- CURRENTLY HERE
+  * [ ] Proper models for albums.
+  * [ ] Proper models for seasons.
+  * [ ] Dinamic-generated list.
   * [ ] API for mp3 handling.
   * [ ] API for searching/getting lists.
   * [ ] API for users.

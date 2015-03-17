@@ -14,7 +14,6 @@ angular.module('weesong')
     $scope.showMenu = false;
     
     $location.path(url);
-    $scope.$broadcast('menuChangeUrl', url);
   });
 
   // Change the header title.
