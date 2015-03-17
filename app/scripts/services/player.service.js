@@ -28,7 +28,7 @@ angular.module('weesong')
   svc.isPaused          = function () { return _player.paused; };
   svc.isPlaying         = function () { return _playerIsPlaying; };
   svc.isLooped          = function () { return _playerIsLooped; };
-  svc.isRandomized      = function () { return _playerIsRamdom; };
+  svc.isShuffled        = function () { return _playerIsRandom; };
 
 
 /* Setters */

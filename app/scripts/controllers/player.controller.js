@@ -11,8 +11,8 @@ angular.module('weesong')
   
   /* Player state variables */
   $scope.isPlaying       = PlayerSvc.isPlaying();
-  $scope.playerLooped    = false;
-  $scope.playerShuffled  = false;
+  $scope.playerLooped    = PlayerSvc.isLooped();
+  $scope.playerShuffled  = PlayerSvc.isShuffled();
 
 
   /* Player elements variables. */
@@ -82,12 +82,15 @@ angular.module('weesong')
 /* Controls handlers */
   // Play on click.
   $scope.play = function () {
-    if ( PlayerSvc.isPaused() ) {
-      PlayerSvc.play();
-    } else {
-      PlayerSvc.pause();
+    if ( $scope.song ) {
+      if ( PlayerSvc.isPaused() ) {
+        PlayerSvc.play();
+      } else {
+        PlayerSvc.pause();
+      }
+
+      $scope.isPlaying = PlayerSvc.isPlaying();
     }
-    $scope.isPlaying = PlayerSvc.isPlaying();
   };
 
   // Play next song on the playlist
@@ -104,14 +107,18 @@ angular.module('weesong')
 
   // Set Loop state.
   $scope.toggleLoop = function () {
-    PlayerSvc.toggleLoop();
-    $scope.playerLooped = ! $scope.playerLooped;
+    if ( $scope.song ) {
+      PlayerSvc.toggleLoop();
+      $scope.playerLooped = ! $scope.playerLooped;
+    }
   }
 
   // Change shuffle state.
   $scope.toggleShuffle = function () {
-    PlayerSvc.toggleRandom();
-    $scope.playerShuffled = ! $scope.playerShuffled;
+    if ( $scope.song ) {
+      PlayerSvc.toggleRandom();
+      $scope.playerShuffled = ! $scope.playerShuffled;
+    }
   }
 
 /* Handle playlist */
