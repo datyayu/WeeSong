@@ -2,7 +2,7 @@
   <ul class="Series-list__index"> 
     <li class="Series-list__index__item">
       <a class="Series-list__index__item__link"
-         href="#/series/">
+         href="/series">
         ALL
       </a>
     </li>
@@ -10,7 +10,7 @@
         class="Series-list__index__item">
       <a class="Series-list__index__item__link"
          ng-if="item.hasResults"
-         ng-href="#/series/filter/{{ item.character.toLowerCase() }}"
+         ng-href="/series/filter/{{ item.character.toLowerCase() }}"
          ng-bind="item.character">
       </a>
       <span ng-if="!item.hasResults"
