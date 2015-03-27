@@ -39,7 +39,7 @@
            ng-src="{{ album.coverImage }}">
     </figure>
     <p class="Playlists-list__item__title"
-       ng-bind="'['+ album.singleType + '] ' + album.title">
+       ng-bind="'['+ album.singleType.toUpperCase() + '] ' + album.title">
     </p>
   </li>
 </ul>

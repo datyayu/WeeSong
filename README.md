@@ -1,15 +1,7 @@
 # Weesong
-A on-development web anisong player app.
+A web anisong player app. 
+Currently just started with the backend, but most of its functionality can be reproduced using a static server, see commits before f5c0387 for a static json db example (no asssets because legal stuff).
 
-# Installation
-Install with:
-```
-  $ npm install
-```
-* Run using:
-```
-  $ gulp dev
-```
 **Assets not included
 
 # Progress/To do list:
@@ -20,19 +12,21 @@ Install with:
   * [x] Navigation.
   * [x] In-player playlist.
   * [x] Site-global playing.
-  * [X] Featured songs/artist. 
-  * [X] Search in-app.
+  * [x] Featured songs/artist. 
+  * [x] Search in-app.
   * [ ] Search via API. (Needs backend support first)
   * [ ] Users.
+  * [ ] Unit testing.
   * [ ] Interface for adding. 
   
 * **Backend**
-  * [X] Static server.
+  * [x] Static server.
   * [ ] Proper models for songs. <-- CURRENTLY HERE
   * [ ] Proper models for albums.
   * [ ] Proper models for seasons.
   * [ ] Dinamic-generated list.
   * [ ] API for mp3 handling.
+  * [ ] Unit testing.
   * [ ] API for searching/getting lists.
   * [ ] API for users.
   * [ ] Real-time streaming.

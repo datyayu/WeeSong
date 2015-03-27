@@ -1,23 +1,19 @@
 "use strict"
 
-const path    = require('path')
+// Dependencies
 const express = require('express')
 const app     = express()
 
-// Static files
-const publicFiles = path.join(__dirname, 'public')
-app.use(express.static(publicFiles))
+// Custom API
+const controllers = require('./controllers')
 
-// Routes
-app.get('*', handleApp)
+
+// Config
+app.use(controllers)
+
 
 // Start listening
 let port = process.env.PORT || 9000
 app.listen(port, function () {
   console.log('[ Weesong ] - Running on port ' + port)
 })
-
-// Routes
-function handleApp (req, res) {
-  res.sendFile(path.join(__dirname, "public", "assets", "html", "index.html"))
-}
