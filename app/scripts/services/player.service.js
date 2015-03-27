@@ -114,6 +114,8 @@ angular.module('weesong')
     if ( _index > 0 ) {
       _currentSong = _playlist.songs[--_index];
       reloadAudio(_currentSong);
+    } else {
+      _player.currentTime = 0;
     }
   };
 

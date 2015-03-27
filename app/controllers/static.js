@@ -8,17 +8,9 @@ const router  = express.Router()
 
 // Static files
 const publicFiles = path.join(__dirname, '../public')
+router.use('/assets', express.static(__dirname + '/../public/assets'));
+router.use('/db', express.static(__dirname + '/../public/db'));
 
-router.get('/assets/*', function (req, res) {
-  let file = req.path.split('%20').join(' ');
-  console.log(file)
-  res.sendFile(publicFiles + file);
-}) 
-router.get('/db/*', function (req, res) {
-  let file = req.path.split('%20').join(' ');
-  console.log(file)
-  res.sendFile(publicFiles + file);
-}) 
 
 
 // Routes declaration.
