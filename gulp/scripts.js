@@ -6,11 +6,19 @@ var gulp       = require('gulp'),
 
 gulp.task('js', function () {
   gulp.src(['app/scripts/**/*.js'])
-    // .pipe(sourcemaps.init())
     .pipe(concat('app.js'))
     .pipe(ngAnnotate())
-    // .pipe(uglify())
-    // .pipe(sourcemaps.write())
+    .pipe(uglify())
+    .pipe(gulp.dest('app/public/assets/scripts'));
+});
+
+gulp.task('js-dev', function () {
+  gulp.src(['app/scripts/**/*.js'])
+    .pipe(sourcemaps.init())
+    .pipe(concat('app.js'))
+    .pipe(ngAnnotate())
+    .pipe(uglify())
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('app/public/assets/scripts'));
 });
 
