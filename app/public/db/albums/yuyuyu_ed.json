@@ -1,0 +1,37 @@
+{
+  "info": {
+    "coverImage": "assets/img/covers/yuyuyu_ed.jpg",
+    "title": "Aurora Days",
+    "series": "Yuuki Yuuna wa Yuusha de Aru",
+    "singleType": "ED",
+    "author": "Sanshuu Chuugaku Yuusha-bu",
+    "date": "November 19th, 2014"
+  },
+  "songs": [
+    {
+      "coverImage": "assets/img/covers/yuyuyu_ed.jpg",
+      "title": "Aurora Days",
+      "artist": "Terai Haruka, Mimori Suzuko, Uchiyama Yumi, Kurosawa Tomoyo, Nagatsuma Juri",
+      "album": "Yuuki Yuuna wa Yuusha de Aru",
+      "url": "assets/mp3/Yuuki Yuuna wa Yuusha de Aru/ED/01 Aurora Days.mp3"
+    },{
+      "coverImage": "assets/img/covers/yuyuyu_ed.jpg",
+      "title": "soda pops",
+      "artist": "Uchiyama Yumi",
+      "album": "Yuuki Yuuna wa Yuusha de Aru",
+      "url": "assets/mp3/Yuuki Yuuna wa Yuusha de Aru/ED/02 soda pops.mp3"
+    },{
+      "coverImage": "assets/img/covers/yuyuyu_ed.jpg",
+      "title": "Aurora Days ＜Instrumental＞",
+      "artist": "Mitsumasu Hajime (FirstCall)",
+      "album": "Yuuki Yuuna wa Yuusha de Aru",
+      "url": "assets/mp3/Yuuki Yuuna wa Yuusha de Aru/ED/03 Aurora Days ＜Instrumental＞.mp3"
+    }, {
+      "coverImage": "assets/img/covers/yuyuyu_ed.jpg",
+      "title": "soda pops ＜Instrumental＞",
+      "artist": "Endou Naoya",
+      "album": "Yuuki Yuuna wa Yuusha de Aru",
+      "url": "assets/mp3/Yuuki Yuuna wa Yuusha de Aru/ED/04 soda pops ＜Instrumental＞.mp3"
+    }
+  ]
+}

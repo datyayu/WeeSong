@@ -1,0 +1,49 @@
+{
+  "info": {
+    "coverImage": "assets/img/covers/shinmaou_op.jpg",
+    "title": "Blade of Hope",
+    "series": "Shinmai Maou no Testament",
+    "singleType": "OP",
+    "author": "sweet ARMS",
+    "date": "February 4th, 2015"
+  },
+  "songs": [
+    {
+      "coverImage": "assets/img/covers/shinmaou_op.jpg",
+      "title": "Blade of Hope",
+      "artist": "sweet ARMS",
+      "album": "Shinmai Maou no Testament",
+      "url": "assets/mp3/Shinmai Maou no Testament/OP/01 Blade of Hope.mp3"
+    }, {
+      "coverImage": "assets/img/covers/shinmaou_op.jpg",
+      "title": "Fire Judgement",
+      "artist": "sweet ARMS",
+      "album": "Shinmai Maou no Testament",
+      "url": "assets/mp3/Shinmai Maou no Testament/OP/02 Fire Judgement.mp3"
+    }, {
+      "coverImage": "assets/img/covers/shinmaou_op.jpg",
+      "title": "Blade of Hope (Another Version)",
+      "artist": "sweet ARMS",
+      "album": "Shinmai Maou no Testament",
+      "url": "assets/mp3/Shinmai Maou no Testament/OP/03 Blade of Hope (Another Version).mp3"
+    }, {
+      "coverImage": "assets/img/covers/shinmaou_op.jpg",
+      "title": "Blade of Hope (Instrumental)",
+      "artist": "Mutsuki Shuuhei",
+      "album": "Shinmai Maou no Testament",
+      "url": "assets/mp3/Shinmai Maou no Testament/OP/04 Blade of Hope -Instrumental-.mp3"
+    }, {
+      "coverImage": "assets/img/covers/shinmaou_op.jpg",
+      "title": "Fire Judgement (Instrumental)",
+      "artist": "Takanashi Yasuharu",
+      "album": "Shinmai Maou no Testament",
+      "url": "assets/mp3/Shinmai Maou no Testament/OP/05 Fire Judgement -Instrumental-.mp3"
+    }, {
+      "coverImage": "assets/img/covers/shinmaou_op.jpg",
+      "title": "Blade of Hope (Another Version) (Instrumental)",
+      "artist": "R・O・N",
+      "album": "Shinmai Maou no Testament",
+      "url": "assets/mp3/Shinmai Maou no Testament/OP/06 Blade of Hope (Another Version) -Instrumental-.mp3"
+    }
+  ]
+}

@@ -3,7 +3,7 @@ node_modules
 npm-debug.log
 
 # Generated assets
-public/
+app/public/assets/
 
 #Windows stuff
 **/Thumbs.db

@@ -1,0 +1,19 @@
+{
+  "info": {
+    "title": "Shinmai Maou no Testament",
+    "season": "Winter 2015",
+    "episodes": null,
+    "site": "http://anime-shinmaimaou.com/"
+  },
+  "albums": [
+    {
+      "singleType": "op",
+      "title": "Blade of Hope",
+      "coverImage": "assets/img/covers/shinmaou_op.jpg"
+    }, {
+      "singleType": "ed",
+      "title": "Still Sis",
+      "coverImage": "assets/img/covers/shinmaou_ed.jpg"
+    }
+  ]
+}

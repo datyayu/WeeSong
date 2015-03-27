@@ -1,0 +1,49 @@
+{
+  "info": {
+    "coverImage": "assets/img/covers/shinmaou_ed.jpg",
+    "title": "Still Sis",
+    "series": "Shinmai Maou no Testament",
+    "singleType": "ED",
+    "author": "Sadohara Kaori",
+    "date": "February 4th, 2015"
+  },
+  "songs": [
+    {
+      "coverImage": "assets/img/covers/shinmaou_ed.jpg",
+      "title": "Still Sis",
+      "artist": "Sadohara Kaori",
+      "album": "Shinmai Maou no Testament",
+      "url": "assets/mp3/Shinmai Maou no Testament/ED/01 Still Sis.mp3"
+    }, {
+      "coverImage": "assets/img/covers/shinmaou_ed.jpg",
+      "title": "Gift",
+      "artist": "Sadohara Kaori",
+      "album": "Shinmai Maou no Testament",
+      "url": "assets/mp3/Shinmai Maou no Testament/ED/02 Gift.mp3"
+    }, {
+      "coverImage": "assets/img/covers/shinmaou_ed.jpg",
+      "title": "Still Sis (Another Version)",
+      "artist": "Sadohara Kaori",
+      "album": "Shinmai Maou no Testament",
+      "url": "assets/mp3/Shinmai Maou no Testament/ED/03 Still Sis (Another Version).mp3"
+    }, {
+      "coverImage": "assets/img/covers/shinmaou_ed.jpg",
+      "title": "Still Sis (Instrumental)",
+      "artist": "Ishii Nobutaka",
+      "album": "Shinmai Maou no Testament",
+      "url": "assets/mp3/Shinmai Maou no Testament/ED/04 Still Sis -Instrumental-.mp3"
+    }, {
+      "coverImage": "assets/img/covers/shinmaou_ed.jpg",
+      "title": "Gift (Instrumental)",
+      "artist": "Goudou Keiko",
+      "album": "Shinmai Maou no Testament",
+      "url": "assets/mp3/Shinmai Maou no Testament/ED/05 Gift -Instrumental-.mp3"
+    }, {
+      "coverImage": "assets/img/covers/shinmaou_ed.jpg",
+      "title": "Still Sis (Another Version) (Instrumental)",
+      "artist": "Okano Yuujirou (TRYTONELABO)",
+      "album": "Shinmai Maou no Testament",
+      "url": "assets/mp3/Shinmai Maou no Testament/ED/06 Still Sis (Another Version) -Instrumental-.mp3"
+    }
+  ]
+}

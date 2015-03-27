@@ -1,0 +1,47 @@
+{
+  "info": {
+    "coverImage": "assets/img/covers/absoluteduo_op.jpg",
+    "title": "Absolute Soul",
+    "author": "Suzuki Konomi",
+    "date": "March 2015"
+  },
+  "songs": [
+    {
+      "coverImage": "assets/img/covers/absoluteduo_op.jpg",
+      "title": "Absolute Soul",
+      "artist": "Suzuki Konomi",
+      "album": "Absolute Duo",
+      "url": "assets/mp3/Absolute Duo/OP/01 Absolute Soul.mp3"
+    }, {
+      "coverImage": "assets/img/covers/absoluteduo_op.jpg",
+      "title": "Absolute Soul -blade-",
+      "artist": "Suzuki Konomi",
+      "album": "Absolute Duo",
+      "url": "assets/mp3/Absolute Duo/OP/02 Absolute Soul -blade-.mp3"
+    }, {
+      "coverImage": "assets/img/covers/absoluteduo_op.jpg",
+      "title": "Deep red heart",
+      "artist": "Suzuki Konomi",
+      "album": "Absolute Duo",
+      "url": "assets/mp3/Absolute Duo/OP/03 Deep red heart.mp3"
+    },{
+      "coverImage": "assets/img/covers/absoluteduo_op.jpg",
+      "title": "Absolute Soul (instrumental)",
+      "artist": "Wakabayashi Mitsuru",
+      "album": "Absolute Duo",
+      "url": "assets/mp3/Absolute Duo/OP/04 Absolute Soul (instrumental).mp3"
+    }, {
+      "coverImage": "assets/img/covers/absoluteduo_op.jpg",
+      "title": "Absolute Soul -blade- (instrumental)",
+      "artist": "Wakabayashi Mitsuru",
+      "album": "Absolute Duo",
+      "url": "assets/mp3/Absolute Duo/OP/05 Absolute Soul -blade- (instrumental).mp3"
+    }, {
+      "coverImage": "assets/img/covers/absoluteduo_op.jpg",
+      "title": "Deep red heart (instrumental)",
+      "artist": "Wakabayashi Mitsuru",
+      "album": "Absolute Duo",
+      "url": "assets/mp3/Absolute Duo/OP/06 Deep red heart (instrumental).mp3"
+    }
+  ]
+}

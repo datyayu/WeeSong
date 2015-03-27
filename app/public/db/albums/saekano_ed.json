@@ -1,0 +1,43 @@
+{
+  "info": {
+    "coverImage": "assets/img/covers/saekano_ed.jpg",
+    "title": "Colorful.",
+    "series": "Saenai Heroine no Sodatedakata",
+    "singleType": "ED",
+    "author": "Sawai Miku",
+    "date": "January 28th, 2015"
+  },
+  "songs": [
+    {
+      "coverImage": "assets/img/covers/saekano_ed.jpg",
+      "title": "Colorful.",
+      "artist": "Sawai Miku",
+      "album": "Saenai Heroine no Sodatedakata",
+      "url": "assets/mp3/Saenai Heroine no Sodatedakata/ED/01 Colorful..mp3"
+    }, {
+      "coverImage": "assets/img/covers/saekano_ed.jpg",
+      "title": "dim",
+      "artist": "Sawai Miku",
+      "album": "Saenai Heroine no Sodatedakata",
+      "url": "assets/mp3/Saenai Heroine no Sodatedakata/ED/02 dim.mp3"
+    }, {
+      "coverImage": "assets/img/covers/saekano_ed.jpg",
+      "title": "Sayonara no Temae",
+      "artist": "Sawai Miku",
+      "album": "Saenai Heroine no Sodatedakata",
+      "url": "assets/mp3/Saenai Heroine no Sodatedakata/ED/03 Sayonara no Temae.mp3"
+    }, {
+      "coverImage": "assets/img/covers/saekano_ed.jpg",
+      "title": "Colorful. (Anime Ver.)",
+      "artist": "Sawai Miku",
+      "album": "Saenai Heroine no Sodatedakata",
+      "url": "assets/mp3/Saenai Heroine no Sodatedakata/ED/04 Colorful. (Anime Ver.).mp3"
+    }, {
+      "coverImage": "assets/img/covers/saekano_ed.jpg",
+      "title": "Colorful. (Instrumental)",
+      "artist": "Sawai Miku",
+      "album": "Saenai Heroine no Sodatedakata",
+      "url": "assets/mp3/Saenai Heroine no Sodatedakata/ED/05 Colorful. (Instrumental).mp3"
+    }
+  ]
+}

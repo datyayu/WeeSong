@@ -1,0 +1,24 @@
+[
+  {
+    "coverImage": "assets/img/iguigu.jpg",
+    "title": "Iguchi Yuka First Single - Hafa Adai",
+    "id": "iguigu",
+    "author": "@datyayu", 
+    "songsNumber": 12,
+    "date": "march 2015"
+  }, {
+    "coverImage": "assets/img/bladedance.jpg",
+    "title": "Seirei Tsukai no Blade Dance Special CD",
+    "id": "bladedance",
+    "author": "@datyayu", 
+    "songsNumber": 3,
+    "date": "march 2015"
+  }, {
+    "coverImage": "assets/img/gochiusa.jpg",
+    "title": "Gochiusa songs",
+    "id": "gochiusa",
+    "author": "@datyayu", 
+    "songsNumber": 5,
+    "date": "february 2015"
+  }
+]

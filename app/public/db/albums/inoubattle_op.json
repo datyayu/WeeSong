@@ -1,0 +1,37 @@
+{
+  "info": {
+    "coverImage": "assets/img/covers/inoubattle_op.jpg",
+    "title": "OVERLAPPERS",
+    "series": "Inou-Battle wa Nichijou-kei no Naka de",
+    "singleType": "ED",
+    "author": "Qverktett:║",
+    "date": "November 19th, 2014"
+  },
+  "songs": [
+    {
+      "coverImage": "assets/img/covers/inoubattle_op.jpg",
+      "title": "OVERLAPPERS",
+      "artist": "Yamazaki Haruka, Hayami Saori, Taneda Risa, Yamashita Nanami",
+      "album": "Inou-Battle wa Nichijou-kei no Naka de",
+      "url": "assets/mp3/Inou-Battle wa Nichijou-kei no Naka de/OP/01 OVERLAPPERS.mp3"
+    },{
+      "coverImage": "assets/img/covers/inoubattle_op.jpg",
+      "title": "Inousei Hakkengaku",
+      "artist": "Yamazaki Haruka, Yamashita Nanami",
+      "album": "Inou-Battle wa Nichijou-kei no Naka de",
+      "url": "assets/mp3/Inou-Battle wa Nichijou-kei no Naka de/OP/02 Inousei Hakkengaku.mp3"
+    },{
+      "coverImage": "assets/img/covers/inoubattle_op.jpg",
+      "title": "OVERLAPPERS (Instrumental)",
+      "artist": "Fujina Junpei (Elements Garden)",
+      "album": "Inou-Battle wa Nichijou-kei no Naka de",
+      "url": "assets/mp3/Inou-Battle wa Nichijou-kei no Naka de/OP/03 OVERLAPPERS (Instrumental).mp3"
+    }, {
+      "coverImage": "assets/img/covers/inoubattle_op.jpg",
+      "title": "Inousei Hakkengaku (Instrumental)",
+      "artist": "Fujina Junpei(Elements Garden)",
+      "album": "Inou-Battle wa Nichijou-kei no Naka de",
+      "url": "assets/mp3/Inou-Battle wa Nichijou-kei no Naka de/OP/04 Inousei Hakkengaku (Instrumental).mp3"
+    }
+  ]
+}

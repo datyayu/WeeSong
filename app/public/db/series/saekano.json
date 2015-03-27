@@ -1,0 +1,19 @@
+{
+  "info": {
+    "title": "Saenai Heroine no Sodatedakata",
+    "season": "Winter 2015",
+    "episodes": 12,
+    "site": "http://www.saenai.tv/"
+  },
+  "albums": [
+    {
+      "singleType": "op",
+      "title": "Colorful.",
+      "coverImage": "assets/img/covers/saekano_op.jpg"
+    }, {
+      "singleType": "ed",
+      "title": "Kimi-iro Signal",
+      "coverImage": "assets/img/covers/saekano_ed.jpg"
+    }
+  ]
+}

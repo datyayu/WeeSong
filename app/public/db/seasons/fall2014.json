@@ -1,0 +1,14 @@
+{
+  "title": "Summer 2014",
+  "series": [
+    {
+      "title": "Yuuki Yuuna wa Yuusha de Aru",
+      "coverImg": "assets/img/series/yuyuyu.jpg",
+      "id": "yuyuyu"
+    },{
+      "title": "Inou-Battle wa Nichijou-kei no Naka de",
+      "coverImg": "assets/img/series/inoubattle.jpg",
+      "id": "inoubattle"
+    }
+  ]
+}

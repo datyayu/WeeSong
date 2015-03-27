@@ -1,0 +1,19 @@
+{
+  "info": {
+    "title": "Yuuki Yuuna wa Yuusha de Aru",
+    "season": "Fall 2014",
+    "episodes": 12,
+    "site": "http://yuyuyu.tv/"
+  },
+  "albums": [
+    {
+      "singleType": "op",
+      "title": "Hoshi to Hana",
+      "coverImage": "assets/img/covers/yuyuyu_op.jpg"
+    }, {
+      "singleType": "ed",
+      "title": "Aurora Days",
+      "coverImage": "assets/img/covers/yuyuyu_ed.jpg"
+    }
+  ]
+}

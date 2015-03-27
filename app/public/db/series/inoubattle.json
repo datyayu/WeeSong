@@ -1,0 +1,19 @@
+{
+  "info": {
+    "title": "Inou-Battle wa Nichijou-kei no Naka de",
+    "season": "Fall 2014",
+    "episodes": 12,
+    "site": "http://inou-anime.com/"
+  },
+  "albums": [
+    {
+      "singleType": "op",
+      "title": "OVERLAPPERS",
+      "coverImage": "assets/img/covers/inoubattle_op.jpg"
+    }, {
+      "singleType": "ed",
+      "title": "You Gotta Love Me!",
+      "coverImage": "assets/img/covers/inoubattle_ed.jpg"
+    }
+  ]
+}
