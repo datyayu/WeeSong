@@ -3,6 +3,7 @@
 <head>
 <!-- Meta-stuff ================================-->
 	<meta charset="UTF-8">
+	<meta name="theme-color" content="#3498db">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<base href="/">
 	<title ng-bind="title"> Weesong </title>
@@ -14,12 +15,12 @@
 <!-- Audio metadata -->
 <audio id="player"></audio>
 
-<div class="Wrapper" 
-		 ng-class="{'Move-right': showMenu, 
+<div class="Wrapper"
+		 ng-class="{'Move-right': showMenu,
 		 						'Move-left' : showPlaylist}">
 
 <!-- Header ====================================-->
-	<header class="Header" 
+	<header class="Header"
 					ng-controller="HeaderCtrl as header">
 	<!-- Logo / Title ==========================-->
 		<h1 class="Header__site-title">
@@ -29,7 +30,7 @@
 			</a>
 		</h1>
 	<!-- Menu mobile button ====================-->
-		<div class="Header__button-menu" 
+		<div class="Header__button-menu"
 				 ng-click="toggleMenu()">
 			<span class="Header__button__line"></span>
 			<span class="Header__button__line"></span>
@@ -48,12 +49,12 @@
 			<span class="Header__user__button"></span>
 		<!-- User avatar =========================-->
 			<figure class="Header__user__image-container">
-				<img class="Header__user__image" 
+				<img class="Header__user__image"
 						 src="assets/img/user.jpg">
 			</figure>
 		</div> <!-- /.User -->
 	<!-- Playlist-mobile button ================-->
-		<div class="Header__button-playlist" 
+		<div class="Header__button-playlist"
 				 ng-show="route === '/player'"
 				 ng-click="togglePlaylist()">
 			<span class="Header__button__line"></span>
@@ -61,15 +62,15 @@
 			<span class="Header__button__line"></span>
 		</div>
 	</header>
-	
+
 <!-- Nav menu ==================================-->
 	<nav class="Menu"
 			 ng-class="{'move-left': showMenu}">
-		<ul class="Menu__list" 
+		<ul class="Menu__list"
 				ng-controller="menuCtrl">
 			<li class="Menu__item"
-					ng-repeat="item in menuItems" 
-					ng-class="{'Active': item.id == activeItem}" 
+					ng-repeat="item in menuItems"
+					ng-class="{'Active': item.id == activeItem}"
 					ng-click="selectOption(item.url)">
 				<span class="Menu__link" ng-bind="item.title"></span>
 			</li>
